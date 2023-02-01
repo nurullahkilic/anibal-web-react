@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 //Components
 import Layout from "./views/Layout";
 import Home from "./views/Home";
-import HamburgerMenu from "./views/HamburgerMenu";
+import Menu from "./views/Menu";
 
 //Style
 import "./App.css"
@@ -14,8 +14,9 @@ const App = () => {
        <Routes>
         <Route path="/" element={<Layout />} >
           <Route index element={<Home />} />
-          <Route path="ham" element={<HamburgerMenu />} />
+          <Route path="ham" element={<Menu />} />
         </Route>
+        {/* <Route path="/menu" element={<Menu />} /> */}
       </Routes>
     </div>
   );

@@ -7,6 +7,10 @@ import "./index.css";
 import { BrowserRouter, useLocation } from "react-router-dom";
 import { useLayoutEffect } from "react";
 
+//Emotions Theme
+import { ThemeProvider } from '@emotion/react'
+import { theme } from "./config/theme";
+
 const Wrapper = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
@@ -17,10 +21,12 @@ const Wrapper = ({ children }) => {
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
       <Wrapper>
         <App />
       </Wrapper>
     </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );

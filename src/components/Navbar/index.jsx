@@ -1,15 +1,38 @@
-import { Content, Logo, NavbarLeft, NavbarRight,NavbarText } from "./styles.js";
+import { Link } from "react-router-dom";
+
+import {
+  Content,
+  LogoLink,
+  Logo,
+  NavbarLeft,
+  ItemsContent,
+  NavbarRight,
+  NavbarLink,
+} from "./styles";
 import AnibalLogo from "../../assets/anibal-logo.png";
 
-const Navbar = () => {
+import { NavbarItems } from "../../config/routes"
+
+const Navbar = ({ children }) => {
   return (
     <Content>
       <NavbarLeft>
-        <Logo src={AnibalLogo} />
+        <LogoLink to={"/"} as={Link}>
+          <Logo src={AnibalLogo} />
+        </LogoLink>
       </NavbarLeft>
       <NavbarRight>
-        <NavbarText>İşlerimiz</NavbarText>
-        <NavbarText>İletişim</NavbarText>
+        <ItemsContent>
+          {NavbarItems &&
+            NavbarItems.map((item) => {
+              return (
+                <NavbarLink as={Link} to={item?.href} key={item?.id}>
+                  {item?.title}
+                </NavbarLink>
+              );
+            })}
+        </ItemsContent>
+        {children}
       </NavbarRight>
     </Content>
   );
