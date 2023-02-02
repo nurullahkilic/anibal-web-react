@@ -11,7 +11,7 @@ export const Container = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 99;
+  z-index: 1;
   background-color: ${({ theme }) => theme.lightTurquoise};
   width: 100%;
   height: 100%;
@@ -22,9 +22,9 @@ export const Container = styled.div`
 `;
 
 export const LinksContent = styled.div`
+  flex: 1;
   padding: 1.3rem;
-  padding-bottom: 6rem;
-  width: 60vw;
+  width: 64vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -54,5 +54,48 @@ export const LinkItem = styled.a`
   @media (max-width: 720px) {
     font-size: 4.2rem;
     line-height: 3.8rem;
+  }
+`;
+
+export const BottomSide = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.125rem;
+  height: fit-content;
+  transform: translateY(-3rem) !important;
+  width: 100%;
+`;
+
+export const BlankSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.87rem;
+`;
+
+export const StartProjectButton = styled.a`
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  width: fit-content;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.0075em;
+  color: #ffffff;
+
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    color: ${({ theme }) => theme.turquoise};
   }
 `;

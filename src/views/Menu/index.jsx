@@ -1,72 +1,84 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-//Animation
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-import { Container, Button, LinksContent, LinkItem } from "./styles";
-import HamburgerIcon from "./components/HamburgerIcon";
+import {
+  Container,
+  LinksContent,
+  LinkItem,
+  BottomSide,
+  BlankSection,
+  StartProjectButton,
+} from "./styles";
+import { Linkedin, Instagram } from "../../components/icons";
 import { MenuItems } from "../../config/routes";
 
 const container = {
   hidden: {
     opacity: 1,
-    y: -999,
+    height: 0,
     transition: {
-      duration:0.8,
+      duration: 0.7,
       delay: 0.4,
       staggerChildren: 0.1,
-      staggerDirection:-1
+      staggerDirection: -1,
     },
   },
   visible: {
     opacity: 1,
-    y: 0,
+    height: "100%",
     transition: {
-      duration:0.7,
-      delayChildren: 0.6,
-      staggerChildren: 0.15,
+      duration: 0.3,
+      delayChildren: 0.34,
+      staggerChildren: 0.13,
     },
   },
 };
 
 const itemValues = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 25, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
   },
 };
 
-
-
-const Menu = () => {
-  const [isClose, setIsClose] = useState(true);
-
+const Menu = ({ isClose }) => {
   return (
-    <>
-
-      <HamburgerIcon isClose={isClose} onClick={() => setIsClose(!isClose)}></HamburgerIcon>
-
-      <Container
-        as={motion.div}
-        variants={container}
-        initial="hidden"
-        animate={isClose ? "hidden" : "visible"}
-      >
-        <LinksContent>
-          {MenuItems &&
-            MenuItems.map((item) => {
-              return (
-                <motion.div variants={itemValues}>
-                  <LinkItem as={Link} to={item?.href} key={item?.id}>
-                    {item?.title}
-                  </LinkItem>
-                </motion.div>
-              );
-            })}
-        </LinksContent>
-      </Container>
-    </>
+    <AnimatePresence>
+      {!isClose && (
+        <Container
+          as={motion.div}
+          variants={container}
+          initial="hidden"
+          animate={isClose ? "hidden" : "visible"}
+          exit="hidden"
+        >
+          <LinksContent>
+            {MenuItems &&
+              MenuItems.map((item) => {
+                return (
+                  <motion.div variants={itemValues} key={item?.id}>
+                    <LinkItem as={Link} to={item?.href}>
+                      {item?.title}
+                    </LinkItem>
+                  </motion.div>
+                );
+              })}
+          </LinksContent>
+          <BottomSide as={motion.div} variants={itemValues}>
+            <BlankSection>
+              <a href="/">
+                <Linkedin />
+              </a>
+              <a href="/">
+                <Instagram />
+              </a>
+            </BlankSection>
+            <StartProjectButton as={Link} to="/">PROJENİ BAŞLAT</StartProjectButton>
+          </BottomSide>
+        </Container>
+      )}
+    </AnimatePresence>
   );
 };
 

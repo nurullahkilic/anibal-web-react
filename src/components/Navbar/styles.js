@@ -1,6 +1,11 @@
 import styled from "@emotion/styled";
 
 export const Content = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
   width: auto;
   height: 2.5rem;
   display: flex;
