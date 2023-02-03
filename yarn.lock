@@ -874,6 +874,11 @@ node-releases@^2.0.8:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.9.tgz#fe66405285382b0c4ac6bcfbfbe7e8a510650b4d"
   integrity sha512-2xfmOrRkGogbTK9R6Leda0DGiXeY3p2NJpy4+gNCffdUvV6mdEJnaDEic1i3Ec2djAo8jWYoJMR5PB0MSMpxUA==
 
+object-assign@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
@@ -922,6 +927,13 @@ react-dom@^18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-id-swiper@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-id-swiper/-/react-id-swiper-4.0.0.tgz#eed938c5a4bf464a5cd7316a1bf6778581f47f2f"
+  integrity sha512-BFY8VQYgc1ECkT1Ek6MYSF8MADjWYZctdeRlMA202mjGcdjq1Bugfhg207KHTjGWKWZlY/7/nxFShqQo74RslA==
+  dependencies:
+    object-assign "^4.1.1"
 
 react-is@^16.7.0:
   version "16.13.1"
@@ -1003,6 +1015,11 @@ source-map@^0.5.7:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==
 
+ssr-window@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.2.tgz#dc6b3ee37be86ac0e3ddc60030f7b3bc9b8553be"
+  integrity sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==
+
 stylis@4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.1.3.tgz#fd2fbe79f5fed17c55269e16ed8da14c84d069f7"
@@ -1019,6 +1036,13 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+swiper@^9.0.2:
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-9.0.2.tgz#7acad3a875e415f2265aa8bb5786455917472bb1"
+  integrity sha512-6iGqr9OeEMU7KVfGxXNW+xhVWmqvVhtt+1nnqbZ0a0i1p/S1rXgr9cPD55k7DFxeOojVHkiEqmsubaP3NgWwUQ==
+  dependencies:
+    ssr-window "^4.0.2"
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
