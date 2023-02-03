@@ -64,8 +64,8 @@ export const NavbarLink = styled.h4`
   height: 100%;
   text-decoration: none;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

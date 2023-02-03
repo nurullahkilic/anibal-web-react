@@ -6,7 +6,7 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -34,7 +34,7 @@ export const LinksContent = styled.div`
     width: 80vw;
   }
   @media (max-width: 720px) {
-    width: 90vw;
+    width: 93vw;
   }
 `;
 

@@ -67,10 +67,10 @@ const Menu = ({ isClose }) => {
           </LinksContent>
           <BottomSide as={motion.div} variants={itemValues}>
             <BlankSection>
-              <a href="/">
+              <a href="https://www.linkedin.com/company/anibalbilisim/" target="_blank">
                 <Linkedin />
               </a>
-              <a href="/">
+              <a href="https://www.instagram.com/anibalbilisim/" target="_blank">
                 <Instagram />
               </a>
             </BlankSection>
