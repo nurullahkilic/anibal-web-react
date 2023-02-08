@@ -17,8 +17,8 @@ export const TextContent = styled.div`
   align-items: flex-end;
   justify-content: center;
   text-align: left;
-  padding: 9.3rem 9.3rem 0 9.3rem;
-  margin-bottom: 4rem;
+  padding-top: 9.3rem;
+  margin: 0 auto 4rem auto;
   @media (max-width: 720px) {
     flex-direction: column;
     padding: 9rem 2rem 0 2rem;

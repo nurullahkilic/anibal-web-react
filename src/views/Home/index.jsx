@@ -12,8 +12,8 @@ const Home = () => {
   return (
     <Container>
       <HeroSection/>
-      <WorksSection/>
       <ServicesSection/>
+      <WorksSection/>
       <ReferancesSection/>
       <TeamsSection/>
       <Footer/>

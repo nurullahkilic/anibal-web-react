@@ -1,4 +1,5 @@
 import { NavIcon } from "./styles";
+
 const HamburgerIcon = ({isClose, ...props}) => {
   return (
     <NavIcon className={!isClose && 'open'} {...props}>
