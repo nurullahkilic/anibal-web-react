@@ -36,9 +36,9 @@ export const Card = styled.div`
     #008287 55.27%,
     #52b69c 94.17%
   );
-  border-radius: 20px;
-  width: 25rem;
-  height: 40rem;
+  border-radius: 1rem;
+  width: 21rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,7 @@ export const Card = styled.div`
 export const CardImage = styled.img`
   width: 100%;
   height: 78%;
-  padding: 0 10px;
+  padding: 0 0.8rem;
   object-fit: contain;
 `;
 
@@ -66,7 +66,7 @@ export const PersonelInfos = styled.div`
 export const Name = styled.h5`
   margin: 0;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height: 150%;
   color: #ffffff;
   margin-bottom: 5px;
@@ -75,7 +75,7 @@ export const Name = styled.h5`
 export const Position = styled.h4`
   margin: 0;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height: 100%;
   margin-left: 24px;
   color: #ffffff;

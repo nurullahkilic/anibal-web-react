@@ -55,6 +55,10 @@ export const LinkItem = styled.a`
     font-size: 4.2rem;
     line-height: 3.8rem;
   }
+  @media (max-width: 400px) {
+    font-size: 3.4rem;
+    line-height: 3rem;
+  }
 `;
 
 export const BottomSide = styled.div`

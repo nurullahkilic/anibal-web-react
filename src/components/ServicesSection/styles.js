@@ -28,10 +28,11 @@ export const SelectionContent = styled.div`
   justify-content: center;
   text-align: left;
   gap: 2.5rem;
+  
 `;
 
 export const Title = styled.h5`
-margin: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 110%;
