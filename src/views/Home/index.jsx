@@ -16,7 +16,6 @@ const Home = () => {
       <WorksSection/>
       <ReferancesSection/>
       <TeamsSection/>
-      <Footer/>
     </Container>
   );
 };

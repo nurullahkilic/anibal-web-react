@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./views/Layout";
 import Home from "./views/Home";
 import Menu from "./views/Menu";
+import Work from "./views/Work";
 
 //Style
 import "./App.css"
@@ -15,7 +16,7 @@ const App = () => {
         <Route path="/" element={<Layout />} >
           <Route index element={<Home />} />
           <Route path="ham" element={<Menu />} />
-          <Route path="work" element={<Layout />} />
+          <Route path="work" element={<Work />} />
           <Route path="services" element={<Layout />} />
         </Route>
         {/* <Route path="/menu" element={<Menu />} /> */}
