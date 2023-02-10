@@ -7,39 +7,43 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 6.25rem;
   padding-top: 4rem;
   @media (max-width: 720px) {
     flex-direction: column;
-  padding-top: 7rem;
-    gap: 3.25rem;
+    padding: 8rem 0 4rem 0;
+    height: fit-content;
   }
 `;
 
-export const HeroImage = styled.img`
+export const SideContent = styled.div`
+  flex: 5;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 30rem;
-  object-fit: cover;
+  justify-content: flex-end;
+  @media (max-width: 720px) {
+    flex-direction: column;
+    padding: 4rem 0;
+  }
 `;
 
 export const HeroTextContent = styled.div`
+  flex: 4;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   text-align: left;
-  width: 40vw;
   @media (max-width: 720px) {
     width: 70vw;
     text-align: center;
     align-items: center;
-
+    padding: 2rem 0;
   }
 `;
 
 export const BgText = styled.div`
+  width: 70%;
   font-weight: 700;
   font-size: 5rem;
   line-height: 110%;
@@ -52,7 +56,7 @@ export const BgText = styled.div`
 `;
 
 export const SmText = styled.div`
-width: 80%;
+  width: 50%;
   font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: 0.0075em;

@@ -3,14 +3,14 @@ import { Container } from "./styles";
 import HeroSection from "../../components/HeroSection";
 import { Title } from "../../components/BaseLayout/styles";
 
-const Work = () => {
+const Services = () => {
   return (
     <Container>
       <HeroSection>
-        <Title fontSize={"10rem"}>İŞ LER</Title>
+        <Title fontSize={"10rem"}>HİZ MET LER</Title>
       </HeroSection>
     </Container>
   );
 };
 
-export default Work;
+export default Services;

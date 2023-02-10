@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
 `;
 
 export const SwiperWrapper = styled.div`
@@ -21,7 +21,7 @@ export const SwiperWrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
   }
   .swiper-slide {
     width: fit-content;
@@ -38,7 +38,7 @@ export const Card = styled.div`
   );
   border-radius: 1rem;
   width: 21rem;
-  height: 35rem;
+  height: 28rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,8 +98,8 @@ export const ButtonsWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.8rem;
-  padding: 0 9.3rem;
+  gap: 0.3rem;
+  padding: 0 5rem;
   width: 100%;
   height: fit-content;
 `;

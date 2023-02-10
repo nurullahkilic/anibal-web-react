@@ -42,7 +42,7 @@ const itemValues = {
   },
 };
 
-const Menu = ({ isClose }) => {
+const Menu = ({ isClose, setIsMenuClose }) => {
   return (
     <AnimatePresence>
       {!isClose && (
@@ -58,7 +58,7 @@ const Menu = ({ isClose }) => {
               MenuItems.map((item) => {
                 return (
                   <motion.div variants={itemValues} key={item?.id}>
-                    <LinkItem as={Link} to={item?.href}>
+                    <LinkItem as={Link} to={item?.href} onClick={() => setIsMenuClose(!isClose)}>
                       {item?.title}
                     </LinkItem>
                   </motion.div>

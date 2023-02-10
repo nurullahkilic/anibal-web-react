@@ -44,7 +44,7 @@ const Navbar = () => {
     <>
       <Content>
         <NavbarLeft>
-          <LogoLink to={"/"} as={Link}>
+          <LogoLink to={"/"} as={Link} onClick={() => setIsMenuClose(true)}>
             <Logo src={AnibalLogo} />
           </LogoLink>
         </NavbarLeft>
@@ -70,7 +70,7 @@ const Navbar = () => {
           ></HamburgerIcon>
         </NavbarRight>
       </Content>
-      <Menu isClose={isMenuClose} />
+      <Menu isClose={isMenuClose} setIsMenuClose={setIsMenuClose}/>
     </>
   );
 };

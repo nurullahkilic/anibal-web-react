@@ -2,7 +2,7 @@ export const NavbarItems = [
   {
     id: 1,
     title: "İşlerimiz",
-    href: "/ham",
+    href: "/work",
   },
   {
     id: 2,
@@ -20,16 +20,16 @@ export const MenuItems = [
   {
     id: 2,
     title: "Kurumsal",
-    href: "/",
+    href: "/agency",
   },
   {
     id: 3,
     title: "Hizmetlerimiz",
-    href: "/",
+    href: "/services",
   },
   {
     id: 4,
     title: "Çalışmalarımız",
-    href: "/",
+    href: "/work",
   },
 ];

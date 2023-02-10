@@ -1,10 +1,11 @@
-import { Container, HeroImage, HeroTextContent, BgText, SmText} from "./styles";
-import ImageSource from "../../assets/abibal-hero.png";
+import { Container,SideContent, HeroTextContent, BgText, SmText} from "./styles";
 
-const HeroSection = () => {
+const HeroSection = ({ children }) => {
   return (
     <Container>
-      <HeroImage src={ImageSource}/>
+      <SideContent>
+      {children}
+      </SideContent>
       <HeroTextContent>
         <BgText>Geleceğe yol açar</BgText>
         <SmText>

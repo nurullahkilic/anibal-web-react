@@ -8,3 +8,11 @@ export const Container = styled.div`
   width: 100%;
   height: fit-content;
 `;
+
+export const HeroImage = styled.img`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+  object-fit: cover;
+`;

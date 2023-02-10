@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: thistle;
   background-color: ${({color})=>color};
 `;
 
@@ -29,11 +28,16 @@ export const TextContent = styled.div`
 export const Title = styled.h1`
   width: 28rem;
   word-wrap: break-word;
+  text-transform: uppercase;
   margin: 0;
   font-weight: 700;
-  font-size: 12.5rem;
+  font-size: ${({ fontSize }) => fontSize ? fontSize : "12.5rem"};
   line-height: 116%;
   letter-spacing: 0.05em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
   color: ${({ theme }) => theme.lightTurquoise};
   @media (max-width: 720px) {
     text-align: center;
