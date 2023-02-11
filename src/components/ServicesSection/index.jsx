@@ -1,6 +1,5 @@
 import { useAnimationControls, motion } from "framer-motion";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import { Services, ImagesAnimationConfig } from "./config"
 
@@ -10,11 +9,12 @@ import {
   Title,
   TabContent,
   TabItem,
-  SeeAllButton,
   ImagesContent,
   SelectionImage,
   SelectionText,
 } from "./styles";
+
+import Button from "../../shared/Button";
 
 const ServicesSection = () => {
   const [selectedId, setSelectedId] = useState(0);
@@ -47,9 +47,9 @@ const ServicesSection = () => {
               );
             })}
         </TabContent>
-        <SeeAllButton as={Link} to={"/"}>
+        <Button to={"/services"} >
           TÜM HİZMETLERİ GÖRÜNTÜLE
-        </SeeAllButton>
+        </Button>
       </SelectionContent>
       <ImagesContent>
         <SelectionImage

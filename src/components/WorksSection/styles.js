@@ -103,7 +103,7 @@ export const Title = styled.h2`
 export const Desc = styled.h5`
   margin: 0;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 130%;
   letter-spacing: 0.022em;
   color: #ffffff;

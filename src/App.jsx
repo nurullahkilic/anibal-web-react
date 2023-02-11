@@ -6,6 +6,7 @@ import Home from "./views/Home";
 import Work from "./views/Work";
 import Agency from "./views/Agency";
 import Services from "./views/Services";
+import NotFound from "./views/NotFound";
 
 //Style
 import "./App.css";
@@ -23,6 +24,7 @@ const App = () => {
             <Route path=":workSlug" element={<Work />} />
           </Route>
         </Route>
+        <Route path='*' element={<NotFound />}/>
       </Routes>
     </div>
   );

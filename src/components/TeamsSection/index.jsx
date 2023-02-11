@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import BaseLayout from "../BaseLayout";
+import BaseLayout from "../../shared/BaseLayout";
 import { PrevButton, NextButton } from "./components/Button";
 import {
   Container,

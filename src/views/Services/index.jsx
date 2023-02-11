@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 
 import HeroSection from "../../components/HeroSection";
-import { Title } from "../../components/BaseLayout/styles";
+import { Title } from "../../shared/BaseLayout/styles";
 
 const Services = () => {
   return (

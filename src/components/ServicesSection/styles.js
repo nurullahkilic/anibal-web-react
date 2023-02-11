@@ -16,6 +16,10 @@ export const Container = styled.div`
   
   @media (max-width: 720px) {
     flex-direction: column;
+    height: fit-content;
+    padding: 6rem 0;
+    gap: 6rem;
+
   }
 `;
 
@@ -60,27 +64,6 @@ export const TabItem = styled.h2`
   color: ${({isSelected})=> isSelected ? "white": "rgba(0, 0, 0, 0.2)"};
   cursor: pointer;
   transition: 200ms color;
-`;
-
-export const SeeAllButton = styled.a`
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.75rem;
-  line-height: 110%;
-  letter-spacing: 0.0075em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  padding: 1.125rem 2rem;
-  border-radius: 9999px;
-  border: 1px solid #ffffff;
-  transition: 300ms all;
-  cursor: pointer;
-  &:hover {
-    background-color: white;
-    color: ${({ theme }) => theme.turquoise};
-  }
 `;
 
 export const ImagesContent = styled.div`

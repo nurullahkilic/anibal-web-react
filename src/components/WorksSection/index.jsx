@@ -10,7 +10,7 @@ import {
   Desc,
 } from "./styles";
 
-import BaseLayout from "../BaseLayout";
+import BaseLayout from "../../shared/BaseLayout";
 
 import WorksResim from "../../assets/works.jpeg";
 import WorksResim2 from "../../assets/works-2.jpeg";

@@ -6,3 +6,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const ImageContent = styled.img`
+  width: 100%;
+  object-fit: cover;
+`;
