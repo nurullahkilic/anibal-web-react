@@ -42,8 +42,8 @@ const Navbar = () => {
 
   return (
     <>
-      <Content>
-        <NavbarLeft>
+      <Content isClose={isMenuClose}>
+        <NavbarLeft className="logo">
           <LogoLink to={"/"} as={Link} onClick={() => setIsMenuClose(true)}>
             <Logo src={AnibalLogo} />
           </LogoLink>

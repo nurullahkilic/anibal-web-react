@@ -15,10 +15,10 @@ export const NavIcon = styled.div`
   & span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 7px;
     width: 100%;
     background: ${({theme})=>theme.black};
-    border-radius: 9px;
+    /* border-radius: 9px; */
     opacity: 1;
     left: 0;
     transform: rotate(0deg);

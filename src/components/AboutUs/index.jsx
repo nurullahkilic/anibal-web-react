@@ -1,5 +1,6 @@
 import Button from "../../shared/Button";
-import { Container, TextContent, Title, SideText } from "./styles";
+import { Container, TextContent, SideText } from "./styles";
+import Title from "../../shared/Title";
 
 const AboutUs = () => {
   return (

@@ -59,7 +59,7 @@ export const TeamsData = [
 
 export const SwiperOptions = {
     slidesPerView: "auto",
-    centeredSlides: true,
+    centeredSlides: false,
     spaceBetween: 0,
     pagination: {
       clickable: true,

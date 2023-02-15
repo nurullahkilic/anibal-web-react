@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
 
 export const Content = styled.div`
+  mix-blend-mode: ${({ isClose }) => (!isClose ? "normal" : "difference")};
+  filter: invert(${({ isClose }) => (!isClose ? "0" : "100%")});
+  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,8 +15,13 @@ export const Content = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 3.85rem 3.125rem;
-  box-sizing:content-box;
+  padding: 3.85rem 2.85rem;
+  box-sizing: content-box;
+
+  & > .logo {
+    visibility: ${({ isClose }) => (!isClose ? "visible" : "hidden")};
+    opacity: ${({ isClose }) => (!isClose ? 1 : 0)};
+  }
 `;
 
 export const NavbarLeft = styled.div`
@@ -22,9 +30,20 @@ export const NavbarLeft = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  transition: 300ms all;
+  visibility: visible;
 `;
 
 export const LogoLink = styled.div`
+  height: 2rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+`;
+
+export const IconStyle = styled.div`
   height: 2rem;
   width: fit-content;
   display: flex;
@@ -43,7 +62,8 @@ export const NavbarRight = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  flex: 1;
 `;
 
 export const ItemsContent = styled.div`
@@ -55,12 +75,12 @@ export const ItemsContent = styled.div`
   gap: 2.8rem;
   margin-right: 3rem;
   @media (max-width: 720px) {
-   display: none;
+    display: none;
   }
 `;
 
 export const NavbarLink = styled.h4`
-  padding: 0 .4rem;
+  padding: 0 0.4rem;
   height: 100%;
   text-decoration: none;
   font-weight: 700;
@@ -70,6 +90,5 @@ export const NavbarLink = styled.h4`
   align-items: center;
   justify-content: center;
   letter-spacing: 0.0075em;
-  color:${({theme})=>theme.black};
-  mix-blend-mode: difference;
+  color: ${({ theme }) => theme.black};
 `;

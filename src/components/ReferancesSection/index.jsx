@@ -4,11 +4,11 @@ import { ReferancesData, RefAnimation, ChildAnimation } from "./config";
 
 import {
   Container,
-  Title,
   LogoItemsContent,
   LogoItem,
   LogoImage,
 } from "./styles";
+import Title from "../../shared/Title";
 
 const ReferancesSection = () => {
   const ref = useRef();

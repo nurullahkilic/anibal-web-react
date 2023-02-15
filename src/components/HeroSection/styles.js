@@ -35,7 +35,7 @@ export const HeroTextContent = styled.div`
   justify-content: center;
   text-align: left;
   @media (max-width: 720px) {
-    width: 70vw;
+    width: 100%;
     text-align: center;
     align-items: center;
     padding: 2rem 0;
@@ -61,11 +61,11 @@ export const SmText = styled.div`
   font-size: 1.1rem;
   letter-spacing: 0.0075em;
   color: ${({ theme }) => theme.black};
-  & > span {
+  & span {
     color: ${({ theme }) => theme.turquoise};
   }
   @media (max-width: 720px) {
-    width: 95%;
+    width: 70%;
     font-size: 1.3rem;
   }
 `;

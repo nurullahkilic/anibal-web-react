@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* background-color: white; */
 `;
 
 export const Title = styled.h4`
@@ -16,7 +17,6 @@ export const Title = styled.h4`
   line-height: 110%;
   letter-spacing: -0.0075em;
   color: ${({ theme }) => theme.black};
-  margin-bottom: 5rem;
 `;
 
 export const LogoItemsContent = styled.div`
@@ -27,6 +27,7 @@ export const LogoItemsContent = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem 2rem;
+  margin-top: 5rem;
   @media (max-width: 720px) {
     width: 90%;
     gap: 2.5rem 0.5rem;

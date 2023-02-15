@@ -21,7 +21,8 @@ export const SwiperWrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.4rem;
+    padding: 0 5rem;
   }
   .swiper-slide {
     width: fit-content;
@@ -49,7 +50,7 @@ export const Card = styled.div`
 export const CardImage = styled.img`
   width: 100%;
   height: 78%;
-  padding: 0 0.8rem;
+  padding: 0.8rem;
   object-fit: contain;
 `;
 
@@ -98,10 +99,14 @@ export const ButtonsWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.3rem;
-  padding: 0 5rem;
+  padding: 0 1rem;
   width: 100%;
   height: fit-content;
+  @media (max-width: 720px) {
+    gap: 0.1rem;
+    padding: 0;
+    justify-content: center;
+  }
 `;
 
 export const DirectionButton = styled.button`

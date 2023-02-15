@@ -32,7 +32,6 @@ export const SelectionContent = styled.div`
   justify-content: center;
   text-align: left;
   gap: 2.5rem;
-  
 `;
 
 export const Title = styled.h5`
@@ -42,6 +41,7 @@ export const Title = styled.h5`
   line-height: 110%;
   letter-spacing: 1px;
   color: #ffffff;
+  
 `;
 
 export const TabContent = styled.div`
