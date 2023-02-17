@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 export const Content = styled.div`
-  mix-blend-mode: ${({ isClose }) => (!isClose ? "normal" : "difference")};
-  filter: invert(${({ isClose }) => (!isClose ? "0" : "100%")});
+  mix-blend-mode: difference;
+  filter: invert(100%);
   color: #fff;
   position: fixed;
   top: 0;
@@ -19,8 +19,12 @@ export const Content = styled.div`
   box-sizing: content-box;
 
   & > .logo {
-    visibility: ${({ isClose }) => (!isClose ? "visible" : "hidden")};
-    opacity: ${({ isClose }) => (!isClose ? 1 : 0)};
+    visibility: ${({ isClose }) => (isClose ? "visible" : "hidden")};
+    opacity: ${({ isClose }) => (isClose ? 1 : 0)};
+  }
+  & > .logo > .active{
+    visibility: hidden;
+    opacity: 0;
   }
 `;
 
@@ -41,6 +45,7 @@ export const LogoLink = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 999;
+  transition: 300ms all;
 `;
 
 export const IconStyle = styled.div`
@@ -53,8 +58,10 @@ export const IconStyle = styled.div`
 `;
 
 export const Logo = styled.img`
+z-index: 990;
   height: 100%;
   object-fit: cover;
+  transform: scale(2.1) translateX(0.7rem);
 `;
 
 export const NavbarRight = styled.div`

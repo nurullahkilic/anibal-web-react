@@ -19,7 +19,7 @@ import { TeamsData, SwiperOptions } from "./config";
 const TeamsSection = () => {
   return (
     <BaseLayout
-      title="TE AM"
+      title="TA KIM"
       sideText="Tasarım gücünden beslenen Anibal ailesi"
       backgroundColor="#1D3141"
     >

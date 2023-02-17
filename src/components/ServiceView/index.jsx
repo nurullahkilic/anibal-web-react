@@ -7,10 +7,6 @@ import {
   Image
 } from "./styles";
 
-import Title from "../../shared/Title";
-
-import { Services } from "../ServicesSection/config";
-
 const ServiceView = ({title,desc,image}) => {
   return (
     <Container>

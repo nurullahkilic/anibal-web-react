@@ -120,6 +120,7 @@ export const DirectionButton = styled.button`
   transform: rotate(${({ rotate }) => (rotate ? rotate + "deg" : 0)});
   transform-origin: center;
   opacity: ${({ opacity }) => (opacity ? opacity : 1)};
+  opacity: 0.8;
   cursor: pointer;
 
   &:hover {

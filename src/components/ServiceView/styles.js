@@ -25,10 +25,8 @@ export const Container = styled.div`
 
 export const TitleSection = styled(Title)`
   @media (max-width: 1500px) {
-    font-size: 3.5rem;
-  }
-  @media (max-width: 720px) {
     text-align: center;
+    font-size: 3.5rem;
   }
 `;
 

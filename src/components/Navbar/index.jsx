@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import {
@@ -13,29 +13,14 @@ import {
 } from "./styles";
 
 import AnibalLogo from "../../assets/anibal-logo.png";
+import AnibalMigfer from "../../assets/anibal-hero.png";
 
 import HamburgerIcon from "../HamburgerIcon";
 import Menu from "../../views/Menu";
 
 import { NavbarItems } from "../../config/routes";
+import { LinksAnimation } from "./config"
 
-const linksAnimation = {
-  hidden: {
-    opacity: 0,
-    x: 20,
-    transition: {
-      duration: 0.4,
-    },
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-      delay: 0.72,
-    },
-  },
-};
 
 const Navbar = () => {
   const [isMenuClose, setIsMenuClose] = useState(true);
@@ -44,14 +29,19 @@ const Navbar = () => {
     <>
       <Content isClose={isMenuClose}>
         <NavbarLeft className="logo">
-          <LogoLink to={"/"} as={Link} onClick={() => setIsMenuClose(true)}>
-            <Logo src={AnibalLogo} />
+          <LogoLink
+            to={"/"}
+            as={NavLink}
+            onClick={() => setIsMenuClose(true)}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <Logo src={AnibalMigfer} />
           </LogoLink>
         </NavbarLeft>
         <NavbarRight>
           <ItemsContent
             as={motion.div}
-            variants={linksAnimation}
+            variants={LinksAnimation}
             initial="visible"
             animate={!isMenuClose ? "hidden" : "visible"}
           >
@@ -70,7 +60,7 @@ const Navbar = () => {
           ></HamburgerIcon>
         </NavbarRight>
       </Content>
-      <Menu isClose={isMenuClose} setIsMenuClose={setIsMenuClose}/>
+      <Menu isClose={isMenuClose} setIsMenuClose={setIsMenuClose} />
     </>
   );
 };
