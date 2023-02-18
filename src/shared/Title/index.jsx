@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Title = ({ children,  ...props }) => {
+const Title = ({ children, ...props }) => {
   return <TitleWrapper {...props}>{children}</TitleWrapper>;
 };
 
@@ -13,8 +13,5 @@ const TitleWrapper = styled.h1`
   font-size: 4.5rem;
   letter-spacing: -0.0075em;
   margin-bottom: 0.5rem;
-  color: ${({theme})=>theme.black};
-  @media (max-width: 720px) {
-    font-size: 3.5rem;
-  }
+  color: ${({ theme }) => theme.black};
 `;

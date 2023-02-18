@@ -7,7 +7,7 @@ export const NavbarItems = [
   {
     id: 2,
     title: "İletişim",
-    href: "/ham",
+    href: "/contact",
   },
 ];
 
@@ -31,5 +31,10 @@ export const MenuItems = [
     id: 4,
     title: "Çalışmalarımız",
     href: "/work",
+  },
+  {
+    id: 5,
+    title: "İletişim",
+    href: "/contact",
   },
 ];

@@ -7,6 +7,7 @@ import Work from "./views/Work";
 import Agency from "./views/Agency";
 import Services from "./views/Services";
 import NotFound from "./views/NotFound";
+import Contact from "./views/Contact";
 
 //Style
 import "./App.css";
@@ -19,12 +20,13 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
           <Route path="agency" element={<Agency />} />
+        <Route path="contact" element={<Contact />} />
           <Route path="work">
             <Route index element={<Work />} />
             <Route path=":workSlug" element={<Work />} />
           </Route>
         </Route>
-        <Route path='*' element={<NotFound />}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
+import "./fonts.css";
 
 //React Router
 import { BrowserRouter, useLocation } from "react-router-dom";

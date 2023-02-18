@@ -18,7 +18,7 @@ export const TextContent = styled.div`
   text-align: left;
   padding-top: 9.3rem;
   margin: 0 auto 4rem auto;
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     flex-direction: column;
     padding: 9rem 2rem 0 2rem;
     align-items: center;
@@ -30,16 +30,16 @@ export const Title = styled.h1`
   word-wrap: break-word;
   text-transform: uppercase;
   margin: 0;
-  font-weight: 700;
+  font-weight: 900;
   font-size: ${({ fontSize }) => fontSize ? fontSize : "12.5rem"};
-  line-height: 116%;
+  line-height: 100%;
   letter-spacing: 0.05em;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   color: ${({ theme }) => theme.lightTurquoise};
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     text-align: center;
   }
 `;
@@ -53,7 +53,7 @@ export const SideText = styled.h3`
   letter-spacing: -0.0075em;
   color: #ffffff;
   transform: translateY(2rem);
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     width: 95%;
     font-size: 4.6rem;
     text-align: center;

@@ -1,13 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 const Layout = () => {
+  let { pathname } = useLocation();
+  
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Outlet />
-      <Footer/>
+      {!pathname.match(/^\/contact/gim) && <Footer />}
     </>
   );
 };

@@ -33,16 +33,16 @@ export const LinksContent = styled.div`
   @media (max-width: 1020px) {
     width: 80vw;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     width: 93vw;
   }
 `;
 
 export const LinkItem = styled.a`
   text-decoration: none;
-  font-weight: 700;
-  font-size: 4.65rem;
-  line-height: 3.75rem;
+  font-weight: 900;
+  font-size: 4.5rem;
+  line-height: 3rem;
   letter-spacing: -0.008em;
   color: rgba(0, 0, 0, 0.2);
   transition: 200ms color;
@@ -51,7 +51,7 @@ export const LinkItem = styled.a`
     color: white;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     font-size: 4.2rem;
     line-height: 3.8rem;
   }

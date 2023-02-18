@@ -1,12 +1,11 @@
 import Button from "../../shared/Button";
-import { Container, TextContent, SideText } from "./styles";
-import Title from "../../shared/Title";
+import { Container, TextContent, BgTitle, SideText } from "./styles";
 
 const AboutUs = () => {
   return (
     <Container>
       <TextContent>
-        <Title>Hakkımızda</Title>
+        <BgTitle>Hakkımızda</BgTitle>
         <SideText>
           <p>
             Bilgi çağından dijital çağa geçerken firmalar için dijitalleşmek

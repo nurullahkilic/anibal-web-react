@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import Title from "../../shared/Title";
+
 
 export const Container = styled.div`
   width: 100%;
@@ -9,8 +11,8 @@ export const Container = styled.div`
   padding: 175px;
   gap: 0.8rem;
 
-  @media (max-width: 720px) {
-    padding: 4rem 3rem;
+  @media (max-width: 760px) {
+    padding: 6rem 3rem;
   }
 `;
 
@@ -25,14 +27,8 @@ export const TextContent = styled.div`
   margin-bottom: 0.5rem;
 `;
 
-export const Title = styled.h1`
-  margin: 0;
-  font-weight: 700;
-  line-height: 110%;
-  font-size: 4.6rem;
-  letter-spacing: -0.0075em;
-  margin-bottom: 0.5rem;
-  @media (max-width: 720px) {
+export const BgTitle = styled(Title)`
+  @media (max-width: 760px) {
     font-size: 3.5rem;
   }
 `;
@@ -40,7 +36,7 @@ export const Title = styled.h1`
 export const SideText = styled.div`
   font-weight: 400;
   font-size: 1rem;
-  letter-spacing: 0.0175em;
+  line-height: 150%;
   color: #373737;
   display: flex;
   flex-direction: column;
