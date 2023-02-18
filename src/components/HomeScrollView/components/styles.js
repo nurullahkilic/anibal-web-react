@@ -20,7 +20,7 @@ export const Container = styled.div`
     text-align: flex-start;
     padding: 6rem 0;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     padding: 0;
     height: fit-content;
   }
@@ -28,14 +28,16 @@ export const Container = styled.div`
 
 export const TitleSection = styled(Title)`
   position: relative;
-  font-size: 3.5rem;
+  font-size: 3.7rem;
+  font-weight: 900;
   text-align: left;
   &::before {
     position: absolute;
     content: "${({ titleId }) => (titleId ? titleId : "01")}";
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 110%;
+    letter-spacing: 1px;
     color: ${({ theme }) => theme.lightTurquoise};
     text-align: left;
     top: 14px;
@@ -44,12 +46,11 @@ export const TitleSection = styled(Title)`
   @media (max-width: 1000px) {
     font-size: 2rem;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     width: 100%;
     font-size: 1.8rem;
     &::before {
       font-size: 1.2rem;
-      font-weight: 500;
       line-height: 110%;
       text-align: left;
       top: 2px;
@@ -70,7 +71,7 @@ export const TextSide = styled.div`
     max-width: 50%;
     padding: 2rem;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     max-width: 100%;
     height: fit-content;
     align-items: flex-start;
@@ -81,14 +82,12 @@ export const TextSide = styled.div`
 export const Desc = styled.p`
   margin: 0;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 150%;
   letter-spacing: 0.0075em;
   color: #373737;
   padding-right: 2rem;
   text-align: left;
-  @media (max-width: 720px) {
-  }
 `;
 
 export const ImageSide = styled.div`
@@ -103,7 +102,7 @@ export const ImageSide = styled.div`
     width: 60vw;
     height: 28rem;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     width: 80vw;
     height: 20rem;
   }

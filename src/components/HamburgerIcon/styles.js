@@ -8,7 +8,7 @@ export const NavIcon = styled.div`
   transition: 0.5s ease-in-out;
   cursor: pointer;
 
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     transform: rotate(0deg) scale(0.5);
   }
 

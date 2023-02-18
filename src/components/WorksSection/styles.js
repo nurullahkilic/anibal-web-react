@@ -31,7 +31,7 @@ export const WorkItem = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     width: 100%;
     min-height: 100%;
     height: fit-content;

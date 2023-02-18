@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: row;
   padding: 5.5rem 7rem;
 
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     flex-direction: column;
     height: fit-content;
     padding: 2rem 3rem 4rem 3rem;
@@ -24,7 +24,7 @@ export const LinksContent = styled.div`
 
   & > a {
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 1.25rem;
     letter-spacing: 0.02em;
     color: #ffffff;
@@ -35,7 +35,7 @@ export const LinksContent = styled.div`
       color: ${({ theme }) => theme.lightTurquoise};
     }
   }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `;
@@ -52,7 +52,7 @@ export const FooterItem = styled.div`
   & > p {
     margin: 0;
     width: 80%;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
     line-height: 160%;
     letter-spacing: 0.02em;
@@ -62,9 +62,9 @@ export const FooterItem = styled.div`
     justify-content: flex-start;
     color: #fff;
     span {
-      font-weight: 700;
+      font-weight: 900;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
       width: 100%;
     }
   }

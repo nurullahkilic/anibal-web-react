@@ -16,12 +16,13 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 6rem;
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     gap: 6rem;
   }
 `;
 
 export const ImageContent = styled.img`
+  display: ${({ inView }) => (inView ? "flex" : "none")};
   position: fixed;
   top: 50%;
   right: 100px;
@@ -31,7 +32,6 @@ export const ImageContent = styled.img`
   height: 50vh;
   overflow: hidden;
   object-fit: cover;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;

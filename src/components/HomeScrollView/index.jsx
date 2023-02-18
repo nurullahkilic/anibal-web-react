@@ -56,6 +56,7 @@ const HomeScrollView = () => {
         variants={ImagesAnimationConfig}
         initial="hidden"
         animate={controls}
+        inView={inView}
       />
     </Container>
   );

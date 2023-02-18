@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Title from "../../shared/Title";
 
 export const Container = styled.div`
   width: 100%;
@@ -10,13 +11,10 @@ export const Container = styled.div`
   /* background-color: white; */
 `;
 
-export const Title = styled.h4`
-  margin: 0;
-  font-weight: 700;
-  font-size: 3.4rem;
-  line-height: 110%;
-  letter-spacing: -0.0075em;
-  color: ${({ theme }) => theme.black};
+export const BgTitle = styled(Title)`
+  @media (max-width: 760px) {
+    font-size: 3.5rem;
+  }
 `;
 
 export const LogoItemsContent = styled.div`
@@ -28,7 +26,7 @@ export const LogoItemsContent = styled.div`
   flex-wrap: wrap;
   gap: 3rem 2rem;
   margin-top: 5rem;
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     width: 90%;
     gap: 2.5rem 0.5rem;
   }
@@ -44,7 +42,7 @@ export const LogoItem = styled.a`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     flex: 1 0 45%;
   }
 `;

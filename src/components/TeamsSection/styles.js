@@ -102,7 +102,7 @@ export const ButtonsWrapper = styled.div`
   padding: 0 1rem;
   width: 100%;
   height: fit-content;
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     gap: 0.1rem;
     padding: 0;
     justify-content: center;

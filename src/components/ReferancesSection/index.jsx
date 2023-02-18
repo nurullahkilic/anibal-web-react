@@ -7,8 +7,8 @@ import {
   LogoItemsContent,
   LogoItem,
   LogoImage,
+  BgTitle
 } from "./styles";
-import Title from "../../shared/Title";
 
 const ReferancesSection = () => {
   const ref = useRef();
@@ -21,7 +21,7 @@ const ReferancesSection = () => {
 
   return (
     <Container>
-      <Title>Referanslarımız</Title>
+      <BgTitle>Referanslarımız</BgTitle>
       <LogoItemsContent
         ref={ref}
         as={motion.div}

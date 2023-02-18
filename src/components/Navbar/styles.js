@@ -81,7 +81,7 @@ export const ItemsContent = styled.div`
   justify-content: center;
   gap: 2.8rem;
   margin-right: 3rem;
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `;
@@ -98,4 +98,5 @@ export const NavbarLink = styled.h4`
   justify-content: center;
   letter-spacing: 0.0075em;
   color: ${({ theme }) => theme.black};
+  color: black;
 `;

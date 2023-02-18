@@ -14,12 +14,12 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 10rem 7rem;
 
   @media (max-width: 1500px) {
-    padding: 10rem 4rem;
     height: fit-content;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     flex-direction: column;
     padding: 6rem 0;
     gap: 6rem;
@@ -38,7 +38,7 @@ export const SelectionContent = styled.div`
   @media (max-width: 1500px) {
     width: 50%;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     width: 80%;
   }
 `;
@@ -53,8 +53,6 @@ export const Title = styled.h5`
 `;
 
 export const TabContent = styled.div`
-  width: 90%;
-  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -62,13 +60,13 @@ export const TabContent = styled.div`
   text-align: left;
   gap: 1.8rem;
   @media (max-width: 1500px) {
-    width: 80%;
+    width: 70%;
   }
 `;
 
 export const TabItem = styled.h2`
   margin: 0;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 3.4rem;
   line-height: 110%;
   letter-spacing: -0.02em;
@@ -85,7 +83,7 @@ export const ImagesContent = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 1.5rem;
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     width: 80vw;
   }
 `;
