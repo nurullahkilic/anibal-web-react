@@ -25,17 +25,15 @@ const HomeScrollViewItem = ({
     setActive: setState,
   });
 
-  useEffect(()=>{
-    // console.log(inView,titleId)
-  },[inView])
-
   return (
     <Container ref={ref}>
       <TextSide>
         <TitleSection titleId={titleId}>{title}</TitleSection>
         <Desc>{desc}</Desc>
       </TextSide>
-      <ImageSide><Image src={image} /></ImageSide>
+      <ImageSide>
+        <Image src={image} />
+      </ImageSide>
     </Container>
   );
 };

@@ -14,7 +14,7 @@ export const HomeScrollData = [
   {
     id: 2,
     number: "02",
-    title: "Projelendiriyoruz",
+    title: "Projelen- diriyoruz",
     description:
       "Mobil cihazların yaşantımızdaki etkisi her geçen gün artıyor. Mobil uygulamalarda geçirilen zaman günde 3 saati bulmuş durumda. ",
     image: ServicesMobile,
@@ -22,7 +22,7 @@ export const HomeScrollData = [
   {
     id: 3,
     number: "03",
-    title: "Sonuçlandırıyoruz",
+    title: "Sonuçlan- dırıyoruz",
     description:
       "Mobil cihazların yaşantımızdaki etkisi her geçen gün artıyor. Mobil uygulamalarda geçirilen zaman günde 3 saati bulmuş durumda.",
     image: ServicesWeb,

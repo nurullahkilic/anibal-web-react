@@ -38,7 +38,7 @@ export const ImageContent = styled.img`
   transition: 200ms all;
   border-radius: 1rem;
   overflow: hidden;
-  @media (max-width: 1500px) {
+  @media (max-width: 1000px) {
     visibility: hidden;
   }
 `;

@@ -11,7 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 6rem;
-  @media (max-width: 1500px) {
+  @media (max-width: 1000px) {
     gap: 0;
     height: fit-content;
     flex-direction: column;
@@ -41,9 +41,6 @@ export const TitleSection = styled(Title)`
     top: 14px;
     left: -35px;
   }
-  @media (max-width: 1500px) {
-    font-size: 3rem;
-  }
   @media (max-width: 1000px) {
     font-size: 2rem;
   }
@@ -69,7 +66,7 @@ export const TextSide = styled.div`
   align-items: flex-start;
   justify-content: center;
   text-align: left;
-  @media (max-width: 1500px) {
+  @media (max-width: 1000px) {
     max-width: 50%;
     padding: 2rem;
   }
@@ -100,7 +97,7 @@ export const ImageSide = styled.div`
   width: 36rem;
   height: 32rem;
   visibility: hidden;
-  @media (max-width: 1500px) {
+  @media (max-width: 1000px) {
     visibility: visible;
     border-radius: 1rem;
     width: 60vw;
