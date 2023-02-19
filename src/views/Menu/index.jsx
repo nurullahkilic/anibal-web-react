@@ -10,7 +10,7 @@ import {
   StartProjectButton,
 } from "./styles";
 import { Linkedin, Instagram } from "../../components/icons";
-import { MenuItems } from "../../config/routes";
+import { MenuItems, SocialMedias } from "../../config/routes";
 
 const container = {
   hidden: {
@@ -58,7 +58,11 @@ const Menu = ({ isClose, setIsMenuClose }) => {
               MenuItems.map((item) => {
                 return (
                   <motion.div variants={itemValues} key={item?.id}>
-                    <LinkItem as={Link} to={item?.href} onClick={() => setIsMenuClose(!isClose)}>
+                    <LinkItem
+                      as={Link}
+                      to={item?.href}
+                      onClick={() => setIsMenuClose(!isClose)}
+                    >
                       {item?.title}
                     </LinkItem>
                   </motion.div>
@@ -67,14 +71,23 @@ const Menu = ({ isClose, setIsMenuClose }) => {
           </LinksContent>
           <BottomSide as={motion.div} variants={itemValues}>
             <BlankSection>
-              <a href="https://www.linkedin.com/company/anibalbilisim/" target="_blank">
-                <Linkedin />
-              </a>
-              <a href="https://www.instagram.com/anibalbilisim/" target="_blank">
-                <Instagram />
-              </a>
+              {SocialMedias &&
+                SocialMedias?.map((item, key) => {
+                  return (
+                    <a
+                      href={item?.href}
+                      title={item?.title}
+                      target="_blank"
+                      key={key}
+                    >
+                      <item.icon />
+                    </a>
+                  );
+                })}
             </BlankSection>
-            <StartProjectButton as={Link} to="/">PROJENİ BAŞLAT</StartProjectButton>
+            <StartProjectButton as={Link} to="/">
+              PROJENİ BAŞLAT
+            </StartProjectButton>
           </BottomSide>
         </Container>
       )}

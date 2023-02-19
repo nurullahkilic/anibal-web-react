@@ -77,7 +77,7 @@ export const BlankSection = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1.87rem;
+  gap: 1.3rem;
 `;
 
 export const StartProjectButton = styled.a`
@@ -101,5 +101,8 @@ export const StartProjectButton = styled.a`
   &:hover {
     background: rgba(255, 255, 255, 1);
     color: ${({ theme }) => theme.turquoise};
+  }
+  @media (max-width: 760px) {
+    display: none;
   }
 `;

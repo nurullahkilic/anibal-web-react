@@ -10,8 +10,8 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  padding: 10rem;
   @media (max-width: 760px) {
+    padding: 10rem 0;
   }
 `;
 
@@ -29,18 +29,27 @@ export const Content = styled.div`
   }
 `;
 
-export const AdressContent = styled.div`
-  margin-top: 2.5rem;
+export const LeftSide = styled.div`
   flex: 4;
-  width: 100%;
+  margin-top: 2.5rem;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  @media (max-width: 760px) {
+    margin-top: 0;
+  }
+`;
+
+export const AdressContent = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  @media (max-width: 760px) {
-    margin-top: 0;
-  }
 `;
 
 export const Adress = styled.div`
@@ -106,8 +115,8 @@ export const ContactCard = styled.div`
   @media (max-width: 760px) {
     padding: 1rem 0;
     & > div {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 `;
 
@@ -127,4 +136,13 @@ export const InputGroup = styled.div`
 export const SubmitButton = styled(Button)`
   width: 10rem;
   align-self: flex-end;
+`;
+
+export const LinksContent = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.3rem;
 `;

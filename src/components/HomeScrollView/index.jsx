@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container,Wrapper, ImageContent } from "./styles";
+import { Container, Wrapper, ImageContent } from "./styles";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimationControls } from "framer-motion";
 
@@ -8,27 +8,22 @@ import { HomeScrollData, ImagesAnimationConfig } from "./config";
 
 const HomeScrollView = () => {
   const [active, setActive] = useState({ isInView: false, activeIndex: -1 });
+  const [isClose, setIsClose] = useState(true);
+
   const { ref, inView } = useInView({
-    threshold: [0.35,0.7],
+    threshold: [0.35, 0.7],
   });
 
   const controls = useAnimationControls();
 
-  const animation = async (itemId) => {
-    await controls.start("hidden");
-    setSelectedId(itemId);
-    setTimeout(() => {
-      controls.start("visible");
-    }, 200);
-  };
-
-
   useEffect(() => {
-    // console.log(active);
-    if(inView)
+    if (inView) {
       controls.start("visible");
-    else 
+      setTimeout(() => setIsClose(false), 220);
+    } else {
       controls.start("hidden");
+      setTimeout(() => setIsClose(true), 220);
+    }
   }, [inView]);
 
   return (
@@ -56,7 +51,7 @@ const HomeScrollView = () => {
         variants={ImagesAnimationConfig}
         initial="hidden"
         animate={controls}
-        inView={inView}
+        isClose={isClose}
       />
     </Container>
   );

@@ -79,8 +79,8 @@ export const ItemsContent = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2.8rem;
-  margin-right: 3rem;
+  gap: 2.4rem;
+  margin-right: 2.1rem;
   @media (max-width: 760px) {
     display: none;
   }
@@ -90,13 +90,16 @@ export const NavbarLink = styled.h4`
   padding: 0 0.4rem;
   height: 100%;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.125rem;
+  font-weight: 900;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 0.0075em;
-  color: ${({ theme }) => theme.black};
+  letter-spacing: 0.01em;
   color: black;
+  transition: 200ms color;
+  &:hover {
+    color: ${({ theme }) => theme.turquoise};
+  }
 `;

@@ -16,13 +16,14 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 6rem;
+
   @media (max-width: 760px) {
     gap: 6rem;
   }
 `;
 
 export const ImageContent = styled.img`
-  display: ${({ inView }) => (inView ? "flex" : "none")};
+  display: ${({ isClose }) => (!isClose ? "flex" : "none")};
   position: fixed;
   top: 50%;
   right: 100px;

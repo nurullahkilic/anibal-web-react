@@ -11,8 +11,19 @@ import Contact from "./views/Contact";
 
 //Style
 import "./App.css";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    document.fonts.ready
+      .then(() => {
+        console.log("Fonts are loaded!!!");
+      })
+      .catch(() => {
+        console.log("Error");
+      });
+  }, []);
+
   return (
     <div className="App">
       <Routes>
@@ -20,10 +31,10 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
           <Route path="agency" element={<Agency />} />
-        <Route path="contact" element={<Contact />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="work">
             <Route index element={<Work />} />
-            <Route path=":workSlug" element={<Work />} />
+            <Route path=":slug" element={<Work />} />
           </Route>
         </Route>
         <Route path="*" element={<NotFound />} />

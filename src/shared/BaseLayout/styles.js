@@ -46,13 +46,13 @@ export const Title = styled.h1`
 
 export const SideText = styled.h3`
   margin: 0;
-  width: 33rem;
-  font-weight: 700;
+  width: 31rem;
+  font-weight: 900;
   font-size: 5rem;
   line-height: 110%;
   letter-spacing: -0.0075em;
   color: #ffffff;
-  transform: translateY(2rem);
+  transform: translateY(2.3rem);
   @media (max-width: 760px) {
     width: 95%;
     font-size: 4.6rem;

@@ -20,14 +20,17 @@ export const SideContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  margin-left: 7rem;
   @media (max-width: 760px) {
     flex-direction: column;
+    margin-left: 0;
+
     padding: 4rem 0;
   }
 `;
 
 export const HeroTextContent = styled.div`
-  flex: 4;
+  flex: 6;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

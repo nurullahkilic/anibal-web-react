@@ -7,7 +7,7 @@ import {
   BlankSection,
 } from "./styles";
 
-import { MenuItems } from "../../config/routes";
+import { MenuItems, SocialMedias } from "../../config/routes";
 import { Linkedin, Instagram } from "../icons";
 
 const Footer = () => {
@@ -21,9 +21,6 @@ const Footer = () => {
                 {item?.title}
               </Link>
             ))}
-          <Link to={"/"} className="active">
-            BİZE ULAŞIN
-          </Link>
         </LinksContent>
       </FooterItem>
       <FooterItem>
@@ -43,15 +40,19 @@ const Footer = () => {
       </FooterItem>
       <FooterItem>
         <BlankSection>
-          <a
-            href="https://www.linkedin.com/company/anibalbilisim/"
-            target="_blank"
-          >
-            <Linkedin />
-          </a>
-          <a href="https://www.instagram.com/anibalbilisim/" target="_blank">
-            <Instagram />
-          </a>
+          {SocialMedias &&
+            SocialMedias?.map((item, key) => {
+              return (
+                <a
+                  href={item?.href}
+                  target="_blank"
+                  title={item?.title}
+                  key={key}
+                >
+                  <item.icon />
+                </a>
+              );
+            })}
         </BlankSection>
         <p>
           <span>0 (262) 503 97 34</span>

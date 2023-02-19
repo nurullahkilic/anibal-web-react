@@ -8,7 +8,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: white; */
 `;
 
 export const BgTitle = styled(Title)`
@@ -36,7 +35,7 @@ export const LogoItem = styled.a`
   position: relative;
   flex: 1 0 21%;
   text-decoration: none;
-  height: 5rem;
+  height: 8rem;
   width: 11rem;
   display: flex;
   align-items: center;
@@ -50,6 +49,7 @@ export const LogoItem = styled.a`
 export const LogoImage = styled.img`
   position: absolute;
   inset: 0;
+  padding: 0 2.5rem;
   width: 100%;
   height: 100%;
   object-fit: contain;

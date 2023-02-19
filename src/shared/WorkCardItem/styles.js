@@ -1,26 +1,11 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
-export const Container = styled.div`
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10rem;
-`;
-
-export const WorkItemsContent = styled.div`
-  height: 100%;
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-`;
+let modeVar;
 
 export const WorkItem = styled.div`
+  ${({ mode }) => (modeVar = mode)}
+
   min-height: 55rem;
   height: fit-content;
   width: 48%;
@@ -37,7 +22,7 @@ export const WorkItem = styled.div`
   }
 `;
 
-export const LinkSection = styled.div`
+export const LinkSection = styled(Link)`
   width: 100%;
   height: 100%;
   flex: 1;
@@ -90,7 +75,9 @@ export const Title = styled.h2`
   font-size: 3.3rem;
   line-height: 90%;
   letter-spacing: -0.0075em;
-  color: #ffffff;
+  color: ${({ theme }) => (modeVar == "dark" ? "white" : theme.black)};
+  
+
   margin-bottom: 0.8rem;
   transition: 100ms color;
 
@@ -105,5 +92,5 @@ export const Desc = styled.h5`
   font-size: 0.95rem;
   line-height: 130%;
   letter-spacing: 0.022em;
-  color: #ffffff;
+  color: ${({ theme }) => (modeVar == "dark" ? "white" : theme.black)};
 `;
