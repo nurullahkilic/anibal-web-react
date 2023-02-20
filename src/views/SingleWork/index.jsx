@@ -10,18 +10,18 @@ import {
   DetailTitle,
   DetailItem,
   BriefText,
-  ProjectScreenView
+  ProjectScreenView,
+  RelatedProjects,
 } from "./styles";
 
 import BannerImageSource from "../../assets/PaletMerkezi.webp";
-import AtikHesapla from "../../assets/atikhesapla-com.png";
 import { WorksData } from "../../config/works";
 
+import WorkCardItem from "../../shared/WorkCardItem";
 
 const SingleWork = () => {
   const { slug } = useParams();
-  const work = WorksData.find((item)=>item.slug==slug);
-
+  const work = WorksData.find((item) => item.slug == slug);
 
   return (
     <Container>
@@ -84,6 +84,15 @@ const SingleWork = () => {
       <ProjectScreenView>
         <img src={work?.webScreen} alt="AtikHesapla" />
       </ProjectScreenView>
+      <RelatedProjects>
+        <SideTitle displayNumber={""}>İlişkili Projeler</SideTitle>
+        <div>
+          {WorksData &&
+            WorksData?.slice(0,2).map((work, key) => (
+              <WorkCardItem {...work} key={key} mode="light" />
+            ))}
+        </div>
+      </RelatedProjects>
     </Container>
   );
 };

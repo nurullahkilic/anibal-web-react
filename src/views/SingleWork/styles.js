@@ -68,7 +68,7 @@ export const BriefText = styled.div`
   line-height: 1.75;
   white-space: pre-line;
   @media (max-width: 760px) {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 `;
 
@@ -139,7 +139,7 @@ export const SideTitle = styled(Title)`
   justify-content: flex-start;
 
   &::before {
-    content: "${({ displayNumber }) => (displayNumber ? displayNumber : "01")}";
+    content: "${({ displayNumber }) => displayNumber}";
     color: ${({ theme }) => theme.lightTurquoise};
     font-weight: 700;
     font-size: 0.75rem;
@@ -157,11 +157,28 @@ export const ProjectScreenView = styled.div`
   height: fit-content;
   box-shadow: rgb(0 0 0 / 25%) 0px 0px 30px;
   width: 80%;
-
+  margin-bottom: 6rem;
   & > img {
     height: 100%;
     width: 100%;
     object-fit: contain;
+  }
+  @media (max-width: 760px) {
+    width: 85%;
+  }
+`;
+
+export const RelatedProjects = styled.div`
+  width: 72%;
+
+  & > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
   @media (max-width: 760px) {
     width: 85%;
