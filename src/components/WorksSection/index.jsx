@@ -3,7 +3,7 @@ import { Container, WorkItemsContent } from "./styles";
 import BaseLayout from "../../shared/BaseLayout";
 
 import WorkCardItem from "../../shared/WorkCardItem";
-import { WorksData } from "./config";
+import { WorksData } from "../../config/works";
 
 const WorksSection = () => {
   return (

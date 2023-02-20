@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const WorksWrapper = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

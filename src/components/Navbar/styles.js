@@ -15,16 +15,19 @@ export const Content = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 3.85rem 2.85rem;
+  padding: 3.85rem 2.85rem 0 2.85rem;
   box-sizing: content-box;
 
   & > .logo {
     visibility: ${({ isClose }) => (isClose ? "visible" : "hidden")};
     opacity: ${({ isClose }) => (isClose ? 1 : 0)};
   }
-  & > .logo > .active{
+  & > .logo > .active {
     visibility: hidden;
     opacity: 0;
+  }
+  @media (max-width: 760px) {
+    padding: 3.85rem 2rem 0 2rem;
   }
 `;
 
@@ -58,7 +61,7 @@ export const IconStyle = styled.div`
 `;
 
 export const Logo = styled.img`
-z-index: 990;
+  z-index: 990;
   height: 100%;
   object-fit: cover;
   transform: scale(2.1) translateX(0.7rem);

@@ -33,7 +33,7 @@ export const Title = styled.h1`
   font-weight: 900;
   font-size: ${({ fontSize }) => fontSize ? fontSize : "12.5rem"};
   line-height: 100%;
-  letter-spacing: 0.05em;
+  letter-spacing: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,6 +41,8 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.lightTurquoise};
   @media (max-width: 760px) {
     text-align: center;
+    width: auto;
+
   }
 `;
 

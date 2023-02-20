@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./views/Layout";
 import Home from "./views/Home";
 import Work from "./views/Work";
+import SingleWork from "./views/SingleWork";
 import Agency from "./views/Agency";
 import Services from "./views/Services";
 import NotFound from "./views/NotFound";
@@ -34,7 +35,7 @@ const App = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="work">
             <Route index element={<Work />} />
-            <Route path=":slug" element={<Work />} />
+            <Route path=":slug" element={<SingleWork />} />
           </Route>
         </Route>
         <Route path="*" element={<NotFound />} />

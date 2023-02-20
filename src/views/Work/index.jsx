@@ -4,7 +4,7 @@ import HeroSection from "../../components/HeroSection";
 import { Title } from "../../shared/BaseLayout/styles";
 
 import WorkCardItem from "../../shared/WorkCardItem";
-import { WorksData } from "../../components/WorksSection/config";
+import { WorksData } from "../../config/works";
 
 const WorkDescription = (
   <div>
