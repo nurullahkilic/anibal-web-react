@@ -1,6 +1,4 @@
-import * as React from "react"
-
-const DirectionIcon = ({color="#fff",size=66, ...props}) => (
+const DirectionIcon = ({ color = "#fff", size = 66, ...props }) => (
   <svg
     width={size}
     height={size}
@@ -15,6 +13,6 @@ const DirectionIcon = ({color="#fff",size=66, ...props}) => (
       fill={color}
     />
   </svg>
-)
+);
 
-export default DirectionIcon
+export default DirectionIcon;

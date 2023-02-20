@@ -80,8 +80,9 @@ export const BlankSection = styled.div`
   gap: 1.3rem;
 `;
 
-export const StartProjectButton = styled.a`
+export const StartProjectButton = styled.button`
   text-decoration: none;
+  border: none;
   display: flex;
   flex-direction: row;
   align-items: center;

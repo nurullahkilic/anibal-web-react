@@ -13,22 +13,3 @@ export const Services = [
     image: ServicesWeb,
   },
 ];
-
-
-export const ImagesAnimationConfig = {
-    hidden: {
-      opacity: 0,
-      y: 10,
-      transition: {
-        duration: 0.25,
-      },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.22,
-        delay: 0.1,
-      },
-    },
-  };

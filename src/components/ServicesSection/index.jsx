@@ -1,7 +1,7 @@
-import { useAnimationControls, motion } from "framer-motion";
+import { AnimatePresence, useAnimationControls, motion } from "framer-motion";
 import { useState } from "react";
 
-import { Services, ImagesAnimationConfig } from "./config"
+import { Services } from "./config";
 
 import {
   Container,
@@ -47,18 +47,20 @@ const ServicesSection = () => {
               );
             })}
         </TabContent>
-        <Button to={"/services"} >
-          TÜM HİZMETLERİ GÖRÜNTÜLE
-        </Button>
+        <Button to={"/services"}>TÜM HİZMETLERİ GÖRÜNTÜLE</Button>
       </SelectionContent>
       <ImagesContent>
-        <SelectionImage
-          src={Services[selectedId]?.image}
-          as={motion.img}
-          variants={ImagesAnimationConfig}
-          initial="visible"
-          animate={controls}
-        />
+        <AnimatePresence mode="wait">
+          <SelectionImage
+            src={Services[selectedId]?.image}
+            as={motion.img}
+            key={Services[selectedId]?.title}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.22 }}
+          />
+        </AnimatePresence>
         <SelectionText>{Services[selectedId]?.desc}</SelectionText>
       </ImagesContent>
     </Container>

@@ -66,7 +66,7 @@ export const Adress = styled.div`
 export const AdressTitle = styled(Title)`
   width: 80%;
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   line-height: 125%;
   letter-spacing: 0.02em;
   color: ${({ theme }) => theme?.lightTurquoise};
@@ -110,7 +110,7 @@ export const ContactCard = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 2.5rem;
+    gap: 1.8rem;
   }
   @media (max-width: 760px) {
     padding: 1rem 0;

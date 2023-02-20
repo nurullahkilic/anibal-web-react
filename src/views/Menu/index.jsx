@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { useModal } from "../../context/ModalContext";
 
 import {
   Container,
@@ -9,7 +10,7 @@ import {
   BlankSection,
   StartProjectButton,
 } from "./styles";
-import { Linkedin, Instagram } from "../../components/icons";
+
 import { MenuItems, SocialMedias } from "../../config/routes";
 
 const container = {
@@ -42,15 +43,19 @@ const itemValues = {
   },
 };
 
-const Menu = ({ isClose, setIsMenuClose }) => {
+const Menu = () => {
+  const isMenuClose = useModal((state) => state.isMenuClose);
+  const toggleMenu = useModal((state) => state.toggleMenu);
+  const toggleStartProject = useModal((state) => state.toggleStartProject);
+
   return (
     <AnimatePresence>
-      {!isClose && (
+      {!isMenuClose && (
         <Container
           as={motion.div}
           variants={container}
           initial="hidden"
-          animate={isClose ? "hidden" : "visible"}
+          animate={isMenuClose ? "hidden" : "visible"}
           exit="hidden"
         >
           <LinksContent>
@@ -61,7 +66,7 @@ const Menu = ({ isClose, setIsMenuClose }) => {
                     <LinkItem
                       as={Link}
                       to={item?.href}
-                      onClick={() => setIsMenuClose(!isClose)}
+                      onClick={toggleMenu}
                     >
                       {item?.title}
                     </LinkItem>
@@ -85,7 +90,7 @@ const Menu = ({ isClose, setIsMenuClose }) => {
                   );
                 })}
             </BlankSection>
-            <StartProjectButton as={Link} to="/">
+            <StartProjectButton onClick={toggleStartProject}>
               PROJENİ BAŞLAT
             </StartProjectButton>
           </BottomSide>

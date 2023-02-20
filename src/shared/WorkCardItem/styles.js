@@ -76,7 +76,6 @@ export const Title = styled.h2`
   line-height: 90%;
   letter-spacing: -0.0075em;
   color: ${({ theme }) => (modeVar == "dark" ? "white" : theme.black)};
-  
 
   margin-bottom: 0.8rem;
   transition: 100ms color;

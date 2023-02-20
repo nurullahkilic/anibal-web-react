@@ -85,10 +85,12 @@ const SingleWork = () => {
         <img src={work?.webScreen} alt="AtikHesapla" />
       </ProjectScreenView>
       <RelatedProjects>
-        <SideTitle displayNumber={""}>İlişkili Projeler</SideTitle>
+        <SideTitle displayNumber={""} style={{ marginBottom: "0" }}>
+          İlişkili Projeler
+        </SideTitle>
         <div>
           {WorksData &&
-            WorksData?.slice(0,2).map((work, key) => (
+            WorksData?.slice(0, 2).map((work, key) => (
               <WorkCardItem {...work} key={key} mode="light" />
             ))}
         </div>

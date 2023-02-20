@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -12,18 +11,18 @@ import {
   NavbarLink,
 } from "./styles";
 
-import AnibalLogo from "../../assets/anibal-logo.png";
 import AnibalMigfer from "../../assets/anibal-hero.png";
-
 import HamburgerIcon from "../HamburgerIcon";
-import Menu from "../../views/Menu";
 
 import { NavbarItems } from "../../config/routes";
 import { LinksAnimation } from "./config"
+import { useModal } from "../../context/ModalContext";
 
 
 const Navbar = () => {
-  const [isMenuClose, setIsMenuClose] = useState(true);
+  const isMenuClose = useModal(state=>state.isMenuClose);
+  const toggleMenu = useModal(state=>state.toggleMenu);
+
 
   return (
     <>
@@ -32,7 +31,6 @@ const Navbar = () => {
           <LogoLink
             to={"/"}
             as={NavLink}
-            onClick={() => setIsMenuClose(true)}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             <Logo src={AnibalMigfer} />
@@ -56,11 +54,10 @@ const Navbar = () => {
           </ItemsContent>
           <HamburgerIcon
             isClose={isMenuClose}
-            onClick={() => setIsMenuClose(!isMenuClose)}
+            onClick={toggleMenu}
           ></HamburgerIcon>
         </NavbarRight>
       </Content>
-      <Menu isClose={isMenuClose} setIsMenuClose={setIsMenuClose} />
     </>
   );
 };
