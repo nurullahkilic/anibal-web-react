@@ -29,7 +29,7 @@ export const LinksContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 3.125rem;
+  gap: 3.5rem;
   @media (max-width: 1020px) {
     width: 80vw;
   }
@@ -41,7 +41,7 @@ export const LinksContent = styled.div`
 export const LinkItem = styled.a`
   text-decoration: none;
   font-weight: 900;
-  font-size: 4.5rem;
+  font-size: 6.125rem;
   line-height: 3rem;
   letter-spacing: -0.008em;
   color: rgba(0, 0, 0, 0.2);
@@ -50,9 +50,14 @@ export const LinkItem = styled.a`
   &:hover {
     color: white;
   }
+  @media (max-width: 1500px) {
+  font-size: 5rem;
+  line-height: 2.3rem;
+  
 
+  }
   @media (max-width: 760px) {
-    font-size: 4.2rem;
+    font-size: 4.8rem;
     line-height: 3.8rem;
   }
   @media (max-width: 400px) {
@@ -87,14 +92,15 @@ export const StartProjectButton = styled.button`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2.5rem;
+  font-family: "SofiaPro";
+  padding: 1.2rem 3.2rem;
   width: fit-content;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 9999px;
   transition: all 0.2s ease-in-out 0s;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0.0075em;
   color: #ffffff;

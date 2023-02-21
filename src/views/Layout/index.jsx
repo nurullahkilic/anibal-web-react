@@ -1,5 +1,4 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { useModal } from "../../context/ModalContext";
 
 import Menu from "../Menu";
 import Navbar from "../../components/Navbar";
@@ -9,15 +8,14 @@ import StartProject from "../StartProject";
 
 const Layout = () => {
   let { pathname } = useLocation();
-  const isStartProjectOpen = useModal((state) => state.isStartProjectOpen);
 
   return (
     <>
       <Menu />
       <Navbar />
       <Outlet />
-      {!pathname.match(/^\/contact/gim) && <Footer />}
       <StartProject />
+      {!pathname.match(/^\/contact/gim) && <Footer />}
       <StartProjectButton>PROJENİ BAŞLAT</StartProjectButton>
     </>
   );

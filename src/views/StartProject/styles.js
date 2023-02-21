@@ -12,11 +12,17 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.lightTurquoise};
   background-color: white;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
 `;
 
 export const CloseButton = styled.svg`
@@ -33,6 +39,9 @@ export const Content = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   border-right: 1px solid #dedede;
+  @media (max-width: 760px) {
+    border-right: none;
+  }
 `;
 
 export const BgTitle = styled(Title)`
@@ -62,8 +71,7 @@ export const MdTitle = styled.a`
   color: ${({ theme }) => theme?.red};
   opacity: 0.8;
 
-  &:hover { 
-  text-decoration: underline;
-
+  &:hover {
+    text-decoration: underline;
   }
 `;

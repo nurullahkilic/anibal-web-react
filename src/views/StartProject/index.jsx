@@ -1,9 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useModal } from "../../context/ModalContext";
 
-import { Container, CloseButton, Content, BgTitle,MdTitle, SmTitle } from "./styles";
+import {
+  Container,
+  CloseButton,
+  Content,
+  BgTitle,
+  MdTitle,
+  SmTitle,
+} from "./styles";
 import { CloseIcon } from "../../components/icons";
-import ContactLayout from "../../shared/ContactLayout"
+import ContactLayout from "../../shared/ContactLayout";
 import { useTheme } from "@emotion/react";
 
 const container = {
@@ -43,13 +50,19 @@ const StartProject = () => {
             as={CloseIcon}
             fill={theme.lightTurquoise}
           />
-          <ContactLayout>
-            <Content>
-              <BgTitle>Haydi! Projene başlamanda sana yardımcı olalım!</BgTitle>
-              <SmTitle>Bizimle iletişime geç!</SmTitle>
-              <MdTitle href="mailto:destek@anibalbilisim.com">destek@anibalbilisim.com</MdTitle>
-            </Content>
-          </ContactLayout>
+          <div>
+            <ContactLayout>
+              <Content>
+                <BgTitle>
+                  Haydi! Projene başlamanda sana yardımcı olalım!
+                </BgTitle>
+                <SmTitle>Bizimle iletişime geç!</SmTitle>
+                <MdTitle href="mailto:destek@anibalbilisim.com">
+                  destek@anibalbilisim.com
+                </MdTitle>
+              </Content>
+            </ContactLayout>
+          </div>
         </Container>
       )}
     </AnimatePresence>

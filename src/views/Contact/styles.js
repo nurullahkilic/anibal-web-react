@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 
 import Title from "../../shared/Title";
 
-
 export const AdressContent = styled.div`
   width: 100%;
   height: 100%;
@@ -26,15 +25,27 @@ export const Adress = styled.div`
 export const AdressTitle = styled(Title)`
   width: 80%;
   font-weight: 900;
-  font-size: 2.8rem;
-  line-height: 125%;
+  font-size: 3.6rem;
+  line-height: 115%;
   letter-spacing: 0.02em;
   color: ${({ theme }) => theme?.lightTurquoise};
+  @media (max-width: 1500px) {
+    font-size: 3.3rem;
+  }
+  @media (max-width: 760px) {
+    font-size: 3rem;
+  }
 `;
 
 const SmTitle = styled(AdressTitle)`
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 2rem;
+  @media (max-width: 1500px) {
+    font-size: 1.4rem;
+  }
+  @media (max-width: 760px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const Tel = styled(SmTitle)``;
@@ -44,14 +55,19 @@ export const Mail = styled(SmTitle)``;
 export const Detail = styled.h4`
   margin: 0;
   width: 80%;
-  font-weight: 700;
-  font-size: 1.3rem;
-  line-height: 150%;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 120%;
   letter-spacing: -0.0075em;
   margin-bottom: 10px;
   color: black;
+  @media (max-width: 1500px) {
+    font-size: 1.8rem;
+  }
+  @media (max-width: 760px) {
+    font-size: 1.7rem;
+  }
 `;
-
 
 export const LinksContent = styled.div`
   width: 100%;
