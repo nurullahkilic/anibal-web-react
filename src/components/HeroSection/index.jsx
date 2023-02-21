@@ -1,6 +1,7 @@
 import {
   Container,
   SideContent,
+  BackgroundTexture,
   HeroTextContent,
   BgText,
   SmText,
@@ -15,13 +16,17 @@ const defaultDescription = (
 );
 
 const HeroSection = ({
+  isAnimated = false,
   children,
   heroText = "Geleceğe yol açar",
   description = defaultDescription,
 }) => {
   return (
     <Container>
-      <SideContent>{children}</SideContent>
+      <SideContent>
+        {!isAnimated ? children : null}
+      </SideContent>
+      {isAnimated && <BackgroundTexture>{children}</BackgroundTexture>}
       <HeroTextContent>
         <BgText>{heroText}</BgText>
         <SmText>{description}</SmText>
