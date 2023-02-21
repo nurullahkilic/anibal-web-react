@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+  cursor: crosshair;
   @media (max-width: 760px) {
     padding: 10rem 0;
   }
@@ -21,6 +22,7 @@ export const Content = styled.div`
   justify-content: center;
   width: 80vw;
   gap: 4rem;
+  z-index: 4;
   @media (max-width: 760px) {
     width: 85vw;
     height: fit-content;
@@ -52,7 +54,8 @@ export const ContactCard = styled.div`
   justify-content: center;
   box-sizing: border-box;
   padding: 2rem 2.5rem;
-  background-color: white;
+  background-color: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
 
   & > div {
     width: 90%;

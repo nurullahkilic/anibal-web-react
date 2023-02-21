@@ -28,7 +28,7 @@ export const AdressTitle = styled(Title)`
   font-size: 3.6rem;
   line-height: 115%;
   letter-spacing: 0.02em;
-  color: ${({ theme }) => theme?.lightTurquoise};
+  color: ${({ theme }) => theme?.red};
   @media (max-width: 1500px) {
     font-size: 3.3rem;
   }
@@ -62,7 +62,7 @@ export const Detail = styled.h4`
   margin-bottom: 10px;
   color: black;
   @media (max-width: 1500px) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   @media (max-width: 760px) {
     font-size: 1.7rem;
@@ -76,4 +76,25 @@ export const LinksContent = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 1.3rem;
+
+  & > a svg {
+    & g {
+      transition: 250ms fill;
+      & path {
+        transition: 250ms fill;
+      }
+    }
+  }
+  & > a:hover svg {
+    & g {
+      fill: ${({ theme }) => theme?.red};
+      stroke: transparent;
+      & path {
+        fill: white;
+      }
+    }
+    & path {
+      fill: white;
+    }
+  }
 `;

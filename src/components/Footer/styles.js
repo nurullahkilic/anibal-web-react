@@ -5,7 +5,7 @@ export const Container = styled.div`
   background-color: #242424;
   display: flex;
   flex-direction: row;
-  padding: 5.5rem 7rem;
+  padding: 8rem 7rem;
 
   @media (max-width: 760px) {
     flex-direction: column;
@@ -63,6 +63,9 @@ export const FooterItem = styled.div`
     color: #fff;
     span {
       font-weight: 900;
+    }
+    span.mail{
+      font-size: 1.5rem;
     }
     @media (max-width: 760px) {
       width: 100%;

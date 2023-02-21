@@ -5,16 +5,15 @@ import {
   Detail,
   Tel,
   Mail,
-  LinksContent
+  LinksContent,
 } from "./styles";
 
 import ContactLayout from "../../shared/ContactLayout";
 import { SocialMedias } from "../../config/routes";
 
-
 const Contact = () => {
   return (
-    <ContactLayout>
+    <ContactLayout isAnimated={true}>
       <AdressContent>
         <Adress>
           <AdressTitle>Bilişim Vadisi</AdressTitle>
@@ -33,15 +32,15 @@ const Contact = () => {
         </Adress>
       </AdressContent>
       <LinksContent>
-            {SocialMedias &&
-              SocialMedias?.map((item, key) => {
-                return (
-                  <a href={item?.href} target="_blank" key={key}>
-                    <item.icon fill="#afafaf" />
-                  </a>
-                );
-              })}
-          </LinksContent>
+        {SocialMedias &&
+          SocialMedias?.map((item, key) => {
+            return (
+              <a href={item?.href} target="_blank" key={key}>
+                <item.icon fill="#afafaf" />
+              </a>
+            );
+          })}
+      </LinksContent>
     </ContactLayout>
   );
 };

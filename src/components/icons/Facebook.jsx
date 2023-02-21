@@ -1,7 +1,7 @@
-const Facebook = ({ fill = "#fff", ...props }) => (
+const Facebook = ({ fill = "#fff", background = "transparent", ...props }) => (
   <svg width={47} height={48} {...props}>
     <g>
-      <g fill="transparent" stroke={fill}>
+      <g fill={background} stroke={fill}>
         <ellipse cx={23.5} cy={24} rx={23.5} ry={24} stroke="none" />
         <ellipse cx={23.5} cy={24} rx={23} ry={23.5} fill="none" />
       </g>

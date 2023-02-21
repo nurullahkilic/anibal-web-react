@@ -29,6 +29,7 @@ export const CloseButton = styled.svg`
   position: absolute;
   top: 3rem;
   right: 3rem;
+  z-index: 35;
   cursor: pointer;
 `;
 

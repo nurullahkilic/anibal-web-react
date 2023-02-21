@@ -57,7 +57,7 @@ const Footer = () => {
         <p>
           <span>0 (262) 503 97 34</span>
           <br />
-          <span>info@anibalbilisim.com</span>
+          <span className="mail">info@anibalbilisim.com</span>
         </p>
       </FooterItem>
     </Container>

@@ -8,14 +8,13 @@ import {
 } from "./styles";
 
 import { Input, TextArea } from "../../shared/Input";
+import MouseTracker from "../../components/MouseTracker";
 
-const ContactLayout = ({ children }) => {
+const ContactLayout = ({ isAnimated = false, children }) => {
   return (
     <Container>
       <Content>
-        <LeftSide>
-         {children}
-        </LeftSide>
+        <LeftSide>{children}</LeftSide>
         <ContactCard>
           <div>
             <InputGroup>
@@ -31,6 +30,7 @@ const ContactLayout = ({ children }) => {
           </div>
         </ContactCard>
       </Content>
+      {isAnimated && <MouseTracker />}
     </Container>
   );
 };
