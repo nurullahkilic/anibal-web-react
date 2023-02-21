@@ -53,6 +53,7 @@ export const Title = styled.h5`
 `;
 
 export const TabContent = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
