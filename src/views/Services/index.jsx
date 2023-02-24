@@ -5,6 +5,8 @@ import { Title } from "../../shared/BaseLayout/styles";
 import ServiceView from "../../components/ServiceView";
 import { Services as ServicesData } from "../../components/ServicesSection/config";
 
+import ServicesHero from "../../assets/hero/hizmetler.png"
+
 const ServicesDescription = (
   <div>
     Profesyonel ekibimiz ve çözüm ortakları ile 360° hizmet sunarak
@@ -15,12 +17,11 @@ const ServicesDescription = (
 const Services = () => {
   return (
     <Container>
-      <HeroSection
+       <HeroSection
+        animatedImage={ServicesHero}
+        titleText={"HİZ MET LER"}
         heroText="Çalışma Alanlarımız"
-        description={ServicesDescription}
-      >
-        <Title fontSize={"10rem"}>HİZ MET LER</Title>
-      </HeroSection>
+      />
       {ServicesData &&
         ServicesData.map((item, key) => {
           return (

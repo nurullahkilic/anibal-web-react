@@ -9,6 +9,7 @@ import Agency from "./views/Agency";
 import Services from "./views/Services";
 import NotFound from "./views/NotFound";
 import Contact from "./views/Contact";
+import Careers from "./views/Careers";
 
 //Style
 import "./App.css";
@@ -27,21 +28,21 @@ const App = () => {
 
   return (
     <div className="App">
-     
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="services" element={<Services />} />
-          <Route path="agency" element={<Agency />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="works" element={<Work />} />
-          <Route path="work">
-            <Route index element={<Work />} />
-            <Route path=":slug" element={<SingleWork />} />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="services" element={<Services />} />
+            <Route path="agency" element={<Agency />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="works" element={<Work />} />
+            <Route path="careers" element={<Careers />} />
+            <Route path="work">
+              <Route index element={<Work />} />
+              <Route path=":slug" element={<SingleWork />} />
+            </Route>
           </Route>
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
     </div>
   );
 };

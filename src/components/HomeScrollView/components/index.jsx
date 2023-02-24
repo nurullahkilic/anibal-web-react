@@ -8,7 +8,6 @@ import {
 } from "./styles";
 
 import useActiveSection from "../util";
-import { useEffect } from "react";
 
 const HomeScrollViewItem = ({
   state,
@@ -19,7 +18,7 @@ const HomeScrollViewItem = ({
   desc,
   image,
 }) => {
-  const { ref, inView } = useActiveSection({
+  const { ref } = useActiveSection({
     itemId: _id,
     active: state,
     setActive: setState,

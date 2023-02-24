@@ -23,7 +23,7 @@ const Wrapper = ({ children }) => {
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-    <BrowserRouter>
+    <BrowserRouter basename="/anibal">
       <Wrapper>
         <App />
       </Wrapper>

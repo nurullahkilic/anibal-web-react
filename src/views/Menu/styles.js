@@ -29,7 +29,7 @@ export const LinksContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 3.5rem;
+  gap: 2.5rem;
   @media (max-width: 1020px) {
     width: 80vw;
   }
@@ -41,8 +41,8 @@ export const LinksContent = styled.div`
 export const LinkItem = styled.a`
   text-decoration: none;
   font-weight: 900;
-  font-size: 6.125rem;
-  line-height: 3rem;
+  font-size: 6rem;
+  line-height: 2.5rem;
   letter-spacing: -0.008em;
   color: rgba(0, 0, 0, 0.2);
   transition: 200ms color;

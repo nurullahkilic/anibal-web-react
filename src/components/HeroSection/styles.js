@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Title } from "../../shared/BaseLayout/styles";
 
 export const Container = styled.div`
   width: 100%;
@@ -57,18 +58,19 @@ export const HeroTextContent = styled.div`
   }
 `;
 
+export const HeroTitle = styled(Title)`
+  font-size: 10rem;
+`;
+
 export const BgText = styled.div`
-  width: 70%;
+  width: 65%;
   font-weight: 900;
-  font-size: 6.5rem;
-  line-height: 90%;
+  font-size: 5rem;
+  line-height: 110%;
   letter-spacing: 0.0075em;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   color: ${({ theme }) => theme.black};
   @media (max-width: 1500px) {
-    font-size: 5rem;
-  }
-  @media (max-width: 760px) {
     font-size: 3.7rem;
   }
 `;

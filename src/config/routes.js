@@ -29,13 +29,18 @@ export const MenuItems = [
   },
   {
     id: 4,
-    title: "Çalışmalarımız",
+    title: "İşlerimiz",
     href: "/works",
   },
   {
     id: 5,
     title: "İletişim",
     href: "/contact",
+  },
+  {
+    id: 6,
+    title: "Kariyer",
+    href: "/careers",
   },
 ];
 

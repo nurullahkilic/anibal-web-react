@@ -9,11 +9,12 @@ import {
 } from "./styles";
 
 import HeroSection from "../../components/HeroSection";
-import { Title } from "../../shared/BaseLayout/styles";
-import { BottomArrow } from "../../components/icons"
+import { BottomArrow } from "../../components/icons";
 
 import WorkCardItem from "../../shared/WorkCardItem";
 import { WorksData } from "../../config/works";
+
+import WorksHero from "../../assets/hero/isler.png";
 
 const WorkDescription = (
   <div>
@@ -28,12 +29,17 @@ const Work = () => {
 
   return (
     <Container>
-      <HeroSection heroText="İşlerimiz" description={WorkDescription}>
-        <Title fontSize={"10rem"}>İŞ LER</Title>
-      </HeroSection>
+      <HeroSection
+        heroText="İşlerimiz"
+        description={WorkDescription}
+        animatedImage={WorksHero}
+        titleText={"İŞ LER"}
+      />
       <WorksWrapper>
         <Filter isOpen={isOpen}>
-          <span onClick={() => setIsOpen(!isOpen)} >Filtrele <BottomArrow fill="black"/> </span>
+          <span onClick={() => setIsOpen(!isOpen)}>
+            Filtrele <BottomArrow fill="black" />
+          </span>
           <div className={!isOpen ? "hidden" : null}>
             <Button
               onClick={() => setSelected(0)}
