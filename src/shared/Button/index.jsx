@@ -19,7 +19,8 @@ const ButtonWrapper = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  text-align: center;
+  padding: 1rem 2.5rem;
   border-radius: 9999px;
   transition: 300ms all;
   cursor: pointer;
