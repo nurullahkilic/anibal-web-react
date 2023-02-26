@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   cursor: crosshair;
-  @media (max-width: 760px) {
+  @media (max-width: 1100px) {
     padding: 10rem 0;
   }
 `;
@@ -23,9 +23,12 @@ export const Content = styled.div`
   width: 80vw;
   gap: 4rem;
   z-index: 4;
+  @media (max-width: 1100px) {
+    height: fit-content;
+    flex-direction: column;
+  }
   @media (max-width: 760px) {
     width: 85vw;
-    height: fit-content;
     flex-direction: column;
   }
 `;
@@ -54,7 +57,7 @@ export const ContactCard = styled.div`
   justify-content: center;
   box-sizing: border-box;
   padding: 2rem 2.5rem;
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(10px);
 
   & > div {
@@ -64,12 +67,12 @@ export const ContactCard = styled.div`
     align-items: center;
     justify-content: flex-start;
     gap: 1.8rem;
-  }
-  @media (max-width: 760px) {
-    padding: 1rem 0;
-    & > div {
+    @media (max-width: 1100px) {
       width: 100%;
     }
+  }
+  @media (max-width: 1100px) {
+    padding: 1rem 0;
   }
 `;
 
@@ -80,7 +83,7 @@ export const InputGroup = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  @media (max-width: 760px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
     gap: 2.5rem;
   }

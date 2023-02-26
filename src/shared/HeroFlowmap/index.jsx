@@ -54,7 +54,6 @@ void main() {
   gl_FragColor = vec4(tex.r, tex2.g, tex3.b, alpha);
 }`;
 
-
 const imgSize = [1920, 1344];
 const heroRef = React.createRef();
 
