@@ -29,18 +29,3 @@ export const HomeScrollData = [
   },
 ];
 
-export const ImagesAnimationConfig = {
-  hidden: {
-    opacity: 0,
-    transition: {
-      duration: 0.22,
-    },
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.22,
-    },
-  },
-};
-  

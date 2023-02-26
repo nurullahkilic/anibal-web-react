@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import Title from "../../../shared/Title";
+import Title from "../../../../shared/Title";
 
 export const Container = styled.div`
   width: 100%;

@@ -7,7 +7,7 @@ import {
   Image,
 } from "./styles";
 
-import useActiveSection from "../util";
+import useActiveSection from "../../util";
 
 const HomeScrollViewItem = ({
   state,

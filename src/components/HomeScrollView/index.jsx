@@ -1,28 +1,23 @@
 import { useEffect, useState } from "react";
-import { Container, Wrapper, ImageContent } from "./styles";
+import { Container, Wrapper, ImageContent, ImageWrapper } from "./styles";
 import { useInView } from "react-intersection-observer";
-import { motion, useAnimationControls } from "framer-motion";
 
-import HomeScrollViewItem from "./components";
-import { HomeScrollData, ImagesAnimationConfig } from "./config";
+import HomeScrollViewItem from "./components/HomeScrollViewItem";
+import { HomeScrollData } from "./config";
 
 const HomeScrollView = () => {
-  const [active, setActive] = useState({ isInView: false, activeIndex: -1 });
+  const [active, setActive] = useState({ isInView: false, activeIndex: 0 });
   const [isClose, setIsClose] = useState(true);
 
   const { ref, inView } = useInView({
     threshold: [0.35, 0.7],
   });
 
-  const controls = useAnimationControls();
-
   useEffect(() => {
     if (inView) {
-      controls.start("visible");
-      setTimeout(() => setIsClose(false), 220);
+      setIsClose(false);
     } else {
-      controls.start("hidden");
-      setTimeout(() => setIsClose(true), 220);
+      setIsClose(true);
     }
   }, [inView]);
 
@@ -45,14 +40,16 @@ const HomeScrollView = () => {
             );
           })}
       </Wrapper>
-      <ImageContent
-        src={HomeScrollData[active?.activeIndex - 1]?.image}
-        as={motion.img}
-        variants={ImagesAnimationConfig}
-        initial="hidden"
-        animate={controls}
+      <ImageWrapper
+        key={active?.activeIndex}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
         isClose={isClose}
-      />
+      >
+        <ImageContent src={HomeScrollData[active?.activeIndex - 1]?.image} />
+      </ImageWrapper>
     </Container>
   );
 };
