@@ -1,17 +1,18 @@
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
-
-let isBackWhiteProp = false;
 
 const Button = ({ children, isBackWhite, ...props }) => {
-  isBackWhiteProp = isBackWhite;
-  return <ButtonWrapper {...props}>{children}</ButtonWrapper>;
+  return (
+    <ButtonWrapper isbackwhite={isBackWhite ? 1 : 0} {...props}>
+      {children}
+    </ButtonWrapper>
+  );
 };
 
 export default Button;
 
-const ButtonWrapper = styled(Link)`
+const ButtonWrapper = styled.button`
   text-decoration: none;
+  font-family: "SofiaPro";
   font-weight: 600;
   font-size: 0.9rem;
   line-height: 100%;
@@ -25,16 +26,18 @@ const ButtonWrapper = styled(Link)`
   transition: 300ms all;
   cursor: pointer;
 
-  color: ${({ theme }) => (isBackWhiteProp ? theme.turquoise : "white")};
+  color: ${({ isbackwhite, theme }) =>
+    isbackwhite ? theme.turquoise : "white"};
   border: 1px solid
-    ${({ theme }) => (isBackWhiteProp ? theme.turquoise : "white")};
+    ${({ isbackwhite, theme }) => (isbackwhite ? theme.turquoise : "white")};
   background-color: transparent;
 
   &:hover {
-    background-color: ${({ theme }) =>
-      isBackWhiteProp ? theme.turquoise : "white"};
-    color: ${({ theme }) => (!isBackWhiteProp ? theme.turquoise : "white")};
+    background-color: ${({ isbackwhite, theme }) =>
+      isbackwhite ? theme.turquoise : "white"};
+    color: ${({ isbackwhite, theme }) =>
+      !isbackwhite ? theme.turquoise : "white"};
     border: 1px solid
-      ${({ theme }) => (!isBackWhiteProp ? theme.turquoise : "white")};
+      ${({ isbackwhite, theme }) => (!isbackwhite ? theme.turquoise : "white")};
   }
 `;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../shared/Button";
 import { Container, TextContent, BgTitle, SideText } from "./styles";
 
@@ -29,7 +30,7 @@ const AboutUs = () => {
           </p>
         </SideText>
       </TextContent>
-      <Button to={"/services"} isBackWhite={true}>
+      <Button to={"/services"} isBackWhite={true} as={Link}>
         TÜM HİZMETLERİ GÖRÜNTÜLE
       </Button>
     </Container>

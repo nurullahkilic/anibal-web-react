@@ -15,6 +15,7 @@ import {
 } from "./styles";
 
 import Button from "../../shared/Button";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const [selectedId, setSelectedId] = useState(0);
@@ -47,7 +48,9 @@ const ServicesSection = () => {
               );
             })}
         </TabContent>
-        <Button to={"/services"}>TÜM HİZMETLERİ GÖRÜNTÜLE</Button>
+        <Button to={"/services"} as={Link}>
+          TÜM HİZMETLERİ GÖRÜNTÜLE
+        </Button>
       </SelectionContent>
       <ImagesContent>
         <AnimatePresence mode="wait">

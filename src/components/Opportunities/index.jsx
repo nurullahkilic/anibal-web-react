@@ -1,10 +1,13 @@
 import { Container, Header } from "./styles";
 import Accordion from "./components/Accordion";
+
+import { OpportunitiesDatas } from "./config";
+
 const Opportunities = () => {
   return (
     <Container>
       <Header>Current Opportunities</Header>
-      <Accordion />
+      <Accordion data={OpportunitiesDatas} />
     </Container>
   );
 };

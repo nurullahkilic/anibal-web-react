@@ -1,5 +1,6 @@
-export const Opportunities = [
+export const OpportunitiesDatas = [
   {
+    slug: "digital-designer",
     name: "Digital Designer",
     description:
       "We’re on the lookout for an experienced Mid-weight/Senior Digital Designer to join our awesome, creative team.",
@@ -47,6 +48,7 @@ export const Opportunities = [
     ],
   },
   {
+    slug: "frontend-developer",
     name: "Frontend Developer",
     description:
       "We’re on the lookout for an experienced Mid-weight/Senior Frontend Developerto join our awesome, creative team.",
@@ -94,6 +96,7 @@ export const Opportunities = [
     ],
   },
   {
+    slug: "project-manager",
     name: "Project Manager",
     description:
       "We’re on the lookout for an experienced Mid-weight/Senior Project Manager to join our awesome, creative team.",

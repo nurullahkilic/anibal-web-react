@@ -1,14 +1,13 @@
+import { Link } from "react-router-dom";
 import { Content, Clauses, ApplyButton } from "./styles";
 
-import { Opportunities } from "../../config";
-
-const InnerContent = ({ itemId }) => {
+const InnerContent = ({ item }) => {
   return (
     <Content>
-      {Opportunities && (
+      {item && (
         <>
-          <p>{Opportunities[itemId]?.description}</p>
-          {Opportunities[itemId]?.requirements?.map((item, key) => (
+          <p>{item?.description}</p>
+          {item?.requirements?.map((item, key) => (
             <Clauses key={key}>
               <h5>{item?.title}</h5>
               <ul>
@@ -21,7 +20,7 @@ const InnerContent = ({ itemId }) => {
           ))}
         </>
       )}
-      <ApplyButton isBackWhite={false} to={"/contact"}>
+      <ApplyButton isBackWhite={false} as={Link} to={`?apply=${item?.slug}`}>
         Şimdi Başvur
       </ApplyButton>
     </Content>

@@ -5,11 +5,11 @@ import { Content, BgTitle, MdTitle, SmTitle } from "./styles";
 import ContactPopup from "../../shared/ContactModal";
 
 const StartProject = () => {
-  const isStartProjectOpen = useModal((state) => state.isStartProjectOpen);
+  const isStartProjectClose = useModal((state) => state.isStartProjectClose);
   const toggleStartProject = useModal((state) => state.toggleStartProject);
 
   return (
-    <ContactPopup isOpen={isStartProjectOpen} toggle={toggleStartProject}>
+    <ContactPopup isOpen={!isStartProjectClose} toggle={toggleStartProject}>
       <Content>
         <BgTitle>Haydi! Projene başlamanda sana yardımcı olalım!</BgTitle>
         <SmTitle>Bizimle iletişime geç!</SmTitle>

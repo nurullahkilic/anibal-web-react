@@ -4,12 +4,15 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import InnerContent from "../InnerContent";
 
-const Item = ({ title, i, expanded, setExpanded }) => {
+const Item = ({ title, i, expanded, setExpanded, item }) => {
   const isOpen = i === expanded;
 
   return (
     <>
-      <ItemContent onClick={() => setExpanded(isOpen ? false : i)} isOpen={isOpen}>
+      <ItemContent
+        onClick={() => setExpanded(isOpen ? false : i)}
+        isOpen={isOpen}
+      >
         <h3>{title}</h3>
         <span onClick={() => {}}>
           <BottomArrow fill="black" />
@@ -28,7 +31,7 @@ const Item = ({ title, i, expanded, setExpanded }) => {
             }}
             transition={{ duration: 0.6, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <InnerContent itemId={i} />
+            <InnerContent item={item} />
           </motion.section>
         )}
       </AnimatePresence>
