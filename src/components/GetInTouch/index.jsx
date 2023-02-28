@@ -1,7 +1,8 @@
-import { Container, Background, Content, Text,ButtonStyle } from "./styles";
+import { Link } from "react-router-dom";
+
+import { Container, Background, Content, Text, ButtonStyle } from "./styles";
 
 import GetInTouchImage from "../../assets/get-in-touch.webp";
-
 
 const GetInTouch = () => {
   return (
@@ -12,7 +13,7 @@ const GetInTouch = () => {
             If you’ve got some cool stuff you’d like to share we’d love to see
             it even if there isn’t a fit right right now.
           </Text>
-          <ButtonStyle isBackWhite={false} to={"/contact"}>
+          <ButtonStyle isBackWhite={false} to={"/contact"} as={Link}>
             GET IN TOUCH
           </ButtonStyle>
         </div>
