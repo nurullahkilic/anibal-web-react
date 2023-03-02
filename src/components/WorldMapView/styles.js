@@ -31,6 +31,9 @@ export const Background = styled.div`
   & > svg {
     opacity: 0.4;
   }
+  @media (max-width: 1500px) {
+    padding: 0 1.3rem;
+  }
 `;
 
 export const CitiesWrapper = styled.div`
@@ -73,7 +76,6 @@ export const City = styled.h3`
     opacity: 0;
     transform: translateY(-20px);
 
-
     content: "${({ projectName }) => (projectName ? projectName : "")}";
     font-size: 1rem;
     font-weight: 500;
@@ -83,7 +85,6 @@ export const City = styled.h3`
     text-align: center;
     bottom: -5px;
     text-transform: uppercase;
-
   }
 
   .reveal {
