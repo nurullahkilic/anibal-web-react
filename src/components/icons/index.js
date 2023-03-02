@@ -5,3 +5,4 @@ export { default as Facebook } from "./Facebook";
 export { default as DirectionIcon } from "./DirectionIcon";
 export { default as BottomArrow } from "./BottomArrow";
 export { default as CloseIcon } from "./CloseIcon";
+export { default as WorldMap } from "./WorldMap";

@@ -73,6 +73,9 @@ export const BgText = styled.div`
   @media (max-width: 1500px) {
     font-size: 3.7rem;
   }
+  @media (max-width: 760px) {
+    font-size: 3rem;
+  }
 `;
 
 export const SmText = styled.div`

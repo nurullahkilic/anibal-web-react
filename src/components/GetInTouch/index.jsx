@@ -10,24 +10,24 @@ const GetInTouch = () => {
       <Content>
         <div>
           <Text>
-            If you’ve got some cool stuff you’d like to share we’d love to see
-            it even if there isn’t a fit right right now.
+            Paylaşmak istediğin harika şeyler varsa, şu anda aktif bir ilan
+            olmasa bile görmek isteriz.
           </Text>
           <ButtonStyle isBackWhite={false} to={"/contact"} as={Link}>
-            GET IN TOUCH
+            İLETİŞİME GEÇ
           </ButtonStyle>
         </div>
         <div>
-          <Text>We're interested in:</Text>
+          <Text>İlgileniyoruz:</Text>
           <ul>
-            <li>Webflow</li>
-            <li>Webgl</li>
-            <li>Web Animation</li>
-            <li>Motion Graphics</li>
-            <li>Photography</li>
-            <li>Illustration</li>
-            <li>Creative Strategy</li>
-            <li>Copywriting</li>
+            <li>Flutter Developer</li>
+            <li>PHP Laravel Developer</li>
+            <li>Golang Developer</li>
+            <li>React.js Developer</li>
+            <li>DevOps</li>
+            <li>UI/UX Designer</li>
+            <li>Product Owner</li>
+            <li>Scrum Master</li>
           </ul>
         </div>
       </Content>

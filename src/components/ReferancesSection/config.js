@@ -1,52 +1,195 @@
-import Fonangels from "../../assets/referances/fonangels.png";
-import Alternatif from "../../assets/referances/alternatif.png";
-import GizSoft from "../../assets/referances/giz-soft.png";
-import Infinitive from "../../assets/referances/infinitive.png";
-import Macellan from "../../assets/referances/macellan.png";
-import Polytime from "../../assets/referances/polytime.png";
-import Startup from "../../assets/referances/startup.png";
-import SugarTech from "../../assets/referances/sugar-tech.png";
+import acar from "../../assets/referances/acar-01.svg";
+import adl from "../../assets/referances/adl-01.svg";
+import alternatif from "../../assets/referances/alternatif-01.svg";
+import dinolino from "../../assets/referances/dinolino-01.svg";
+import doludizgin from "../../assets/referances/doludizgin-01.svg";
+import fonangels from "../../assets/referances/fonangels-01.svg";
+import fonborsasi from "../../assets/referances/fonborsasi-01.svg";
+import gissoft from "../../assets/referances/gissoft-01.svg";
+import global from "../../assets/referances/global-01.svg";
+import gto from "../../assets/referances/gto-01.svg";
+import innfinitive from "../../assets/referances/innfinitive-01.svg";
+import maarif from "../../assets/referances/maarif-01.svg";
+import macellan from "../../assets/referances/macellan-01.svg";
+import mks from "../../assets/referances/mks-01.svg";
+import moon from "../../assets/referances/moon-01.svg";
+import nitra from "../../assets/referances/nitra-01.svg";
+import palet from "../../assets/referances/palet-01.svg";
+import polytime from "../../assets/referances/polytime-01.svg";
+import simsekdent from "../../assets/referances/simsekdent-01.svg";
+import star from "../../assets/referances/startup.svg";
+import sugar from "../../assets/referances/sugar-01.svg";
+import time from "../../assets/referances/time-01.svg";
+import zerone from "../../assets/referances/zerone-01.svg";
+
+export const HomePageReferancesData = [
+  {
+    title: "alternatif",
+    href: "https://example.com/",
+    image: alternatif,
+  },
+  {
+    title: "doludizgin",
+    href: "https://example.com/",
+    image: doludizgin,
+  },
+  {
+    title: "fonangels",
+    href: "https://example.com/",
+    image: fonangels,
+  },
+  {
+    title: "gissoft",
+    href: "https://example.com/",
+    image: gissoft,
+  },
+  {
+    title: "global",
+    href: "https://example.com/",
+    image: global,
+  },
+  {
+    title: "maarif",
+    href: "https://example.com/",
+    image: maarif,
+  },
+  {
+    title: "macellan",
+    href: "https://example.com/",
+    image: macellan,
+  },
+  {
+    title: "moon",
+    href: "https://example.com/",
+    image: moon,
+  },
+  {
+    title: "nitra",
+    href: "https://example.com/",
+    image: nitra,
+  },
+  {
+    title: "palet",
+    href: "https://example.com/",
+    image: palet,
+  },
+];
 
 export const ReferancesData = [
   {
-    title: "Fonangels",
+    title: "acar",
     href: "https://example.com/",
-    image: Fonangels,
+    image: acar,
   },
   {
-    title: "Alternatif",
+    title: "adl",
     href: "https://example.com/",
-    image: Alternatif,
+    image: adl,
   },
   {
-    title: "GizSoft",
+    title: "alternatif",
     href: "https://example.com/",
-    image: GizSoft,
+    image: alternatif,
   },
   {
-    title: "Infinitive",
+    title: "dinolino",
     href: "https://example.com/",
-    image: Infinitive,
+    image: dinolino,
   },
   {
-    title: "Macellan",
+    title: "doludizgin",
     href: "https://example.com/",
-    image: Macellan,
+    image: doludizgin,
   },
   {
-    title: "Polytime",
+    title: "fonangels",
     href: "https://example.com/",
-    image: Polytime,
+    image: fonangels,
   },
   {
-    title: "Startup",
+    title: "fonborsasi",
     href: "https://example.com/",
-    image: Startup,
+    image: fonborsasi,
   },
   {
-    title: "SugarTech",
+    title: "gissoft",
     href: "https://example.com/",
-    image: SugarTech,
+    image: gissoft,
+  },
+  {
+    title: "global",
+    href: "https://example.com/",
+    image: global,
+  },
+  {
+    title: "gto",
+    href: "https://example.com/",
+    image: gto,
+  },
+  {
+    title: "innfinitive",
+    href: "https://example.com/",
+    image: innfinitive,
+  },
+  {
+    title: "maarif",
+    href: "https://example.com/",
+    image: maarif,
+  },
+  {
+    title: "macellan",
+    href: "https://example.com/",
+    image: macellan,
+  },
+  {
+    title: "mks",
+    href: "https://example.com/",
+    image: mks,
+  },
+  {
+    title: "moon",
+    href: "https://example.com/",
+    image: moon,
+  },
+  {
+    title: "nitra",
+    href: "https://example.com/",
+    image: nitra,
+  },
+  {
+    title: "palet",
+    href: "https://example.com/",
+    image: palet,
+  },
+  {
+    title: "polytime",
+    href: "https://example.com/",
+    image: polytime,
+  },
+  {
+    title: "simsekdent",
+    href: "https://example.com/",
+    image: simsekdent,
+  },
+  {
+    title: "star",
+    href: "https://example.com/",
+    image: star,
+  },
+  {
+    title: "sugar",
+    href: "https://example.com/",
+    image: sugar,
+  },
+  {
+    title: "time",
+    href: "https://example.com/",
+    image: time,
+  },
+  {
+    title: "zerone",
+    href: "https://example.com/",
+    image: zerone,
   },
 ];
 
@@ -79,5 +222,3 @@ export const ChildAnimation = {
     opacity: 1,
   },
 };
-
-  

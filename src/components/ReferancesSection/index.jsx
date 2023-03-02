@@ -1,16 +1,16 @@
 import { useRef, useEffect } from "react";
 import { useInView, useAnimation, motion } from "framer-motion";
-import { ReferancesData, RefAnimation, ChildAnimation } from "./config";
+import { RefAnimation, ChildAnimation } from "./config";
 
 import {
   Container,
   LogoItemsContent,
   LogoItem,
   LogoImage,
-  BgTitle
+  BgTitle,
 } from "./styles";
 
-const ReferancesSection = () => {
+const ReferancesSection = ({ children, data, ...props }) => {
   const ref = useRef();
   const inView = useInView(ref);
   const controls = useAnimation();
@@ -20,7 +20,7 @@ const ReferancesSection = () => {
   }, [inView, controls]);
 
   return (
-    <Container>
+    <Container {...props}>
       <BgTitle>Referanslarımız</BgTitle>
       <LogoItemsContent
         ref={ref}
@@ -30,7 +30,7 @@ const ReferancesSection = () => {
         animate={controls}
         exit="hidden"
       >
-        {ReferancesData.map((item, key) => {
+        {data?.map((item, key) => {
           return (
             <LogoItem
               href={item?.href}
@@ -44,6 +44,7 @@ const ReferancesSection = () => {
           );
         })}
       </LogoItemsContent>
+      {children}
     </Container>
   );
 };

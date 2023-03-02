@@ -31,7 +31,7 @@ export const LogoItemsContent = styled.div`
   }
 `;
 
-export const LogoItem = styled.a`
+export const LogoItem2 = styled.a`
   position: relative;
   flex: 1 0 21%;
   text-decoration: none;
@@ -46,10 +46,22 @@ export const LogoItem = styled.a`
   }
 `;
 
+export const LogoItem = styled.a`
+  position: relative;
+  flex: 1 0 12%;
+  margin: 1.5rem 1.5rem 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 760px) {
+    flex: 1 0 30%;
+  }
+`;
+
 export const LogoImage = styled.img`
   position: absolute;
   inset: 0;
-  padding: 0 2.5rem;
   width: 100%;
   height: 100%;
   object-fit: contain;

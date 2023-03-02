@@ -4,12 +4,12 @@ import ServicesWeb from "../../assets/services-web.png";
 export const Services = [
   {
     title: "Mobil Teknolojiler",
-    desc: "Profesyonel ekibimiz ve çözüm ortakları ile 360 hizmet sunarak, müşterilere sürdürülebilir ve hızlı hizmet vermek için çalışıyoruz.",
+    desc: "Hayal ettiğiniz web uygulamalarını detaylı şekilde analiz ediyor, geliştirmek için en güncel teknolojileri kullanıyor, sürdürülebilir ve genişletilebilir yazılım geliştirme hizmetleri sunuyoruz.",
     image: ServicesMobile,
   },
   {
     title: "Web Teknolojileri",
-    desc: "Profesyonel ekibimiz ve çözüm ortakları ile 360 hizmet sunarak, müşterilere sürdürülebilir ve hızlı hizmet vermek için çalışıyoruz.",
+    desc: "Markanızı dijitale taşıyan, işinizi büyüten ve kullanıcılarınızı memnun eden mobil uygulamalar geliştiriyoruz.",
     image: ServicesWeb,
   },
 ];

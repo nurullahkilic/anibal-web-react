@@ -12,7 +12,8 @@ const Careers = () => {
       <HeroSection
         animatedImage={KariyerHero}
         titleText={"KA TIL"}
-        heroText="Mükemmel takımımızın bir parçası ol ve istediğin yerde çalış!"
+        heroText="Mükemmel takımımızın bir parçası olmaya hazır mısın?"
+        description="Anibal ekibi kreatif ve başarılı yeteneklerden oluşur."
       />
       <Opportunities />
       <GetInTouch />

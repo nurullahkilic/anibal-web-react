@@ -20,7 +20,7 @@ const TeamsSection = () => {
   return (
     <BaseLayout
       title="TA KIM"
-      sideText="Tasarım gücünden beslenen Anibal ailesi"
+      sideText="Tasarımın gücünden beslenen ekip"
       backgroundColor="#1D3141"
     >
       <Container>

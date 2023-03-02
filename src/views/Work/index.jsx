@@ -30,7 +30,7 @@ const Work = () => {
   return (
     <Container>
       <HeroSection
-        heroText="İşlerimiz"
+        heroText="Dijital dünyadaki yolculuğunuzda yanınızdayız."
         description={WorkDescription}
         animatedImage={WorksHero}
         titleText={"İŞ LER"}

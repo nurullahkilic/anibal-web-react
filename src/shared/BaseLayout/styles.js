@@ -54,9 +54,12 @@ export const SideText = styled.h3`
   letter-spacing: -0.0075em;
   color: #ffffff;
   transform: translateY(2.3rem);
+  @media (max-width: 1500px) {
+    font-size: 4rem;
+  }
   @media (max-width: 760px) {
     width: 95%;
-    font-size: 4.6rem;
+    font-size: 3rem;
     text-align: center;
     transform: translateY(0);
   }

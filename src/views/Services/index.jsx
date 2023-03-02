@@ -1,23 +1,15 @@
 import { Container } from "./styles";
 
 import HeroSection from "../../components/HeroSection";
-import { Title } from "../../shared/BaseLayout/styles";
 import ServiceView from "../../components/ServiceView";
-import { Services as ServicesData } from "../../components/ServicesSection/config";
+import { Services as ServicesData } from "./config";
 
-import ServicesHero from "../../assets/hero/hizmetler.png"
-
-const ServicesDescription = (
-  <div>
-    Profesyonel ekibimiz ve çözüm ortakları ile 360° hizmet sunarak
-    müşterilerine sürdürülebilir ve hızlı hizmet vermek için çalışıyoruz.
-  </div>
-);
+import ServicesHero from "../../assets/hero/hizmetler.png";
 
 const Services = () => {
   return (
     <Container>
-       <HeroSection
+      <HeroSection
         animatedImage={ServicesHero}
         titleText={"HİZ MET LER"}
         heroText="Çalışma Alanlarımız"

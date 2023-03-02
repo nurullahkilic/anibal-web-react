@@ -6,7 +6,7 @@ import { OpportunitiesDatas } from "./config";
 const Opportunities = () => {
   return (
     <Container>
-      <Header>Current Opportunities</Header>
+      <Header>Mevcut Pozisyonlar</Header>
       <Accordion data={OpportunitiesDatas} />
     </Container>
   );

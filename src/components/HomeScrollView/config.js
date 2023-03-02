@@ -8,7 +8,7 @@ export const HomeScrollData = [
     number: "01",
     title: "Dinliyoruz",
     description:
-      "Mobil cihazların yaşantımızdaki etkisi her geçen gün artıyor. Mobil uygulamalarda geçirilen zaman günde 3 saati bulmuş durumda.",
+      "Sizleri dinliyor, fikrinizi analiz ediyor, istek ve ihtiyaçlarınızı araştırıyoruz. Size en uygun hizmeti sağlıyoruz.",
     image: ScrollViewImage,
   },
   {
@@ -16,7 +16,7 @@ export const HomeScrollData = [
     number: "02",
     title: "Projelendiriyoruz",
     description:
-      "Mobil cihazların yaşantımızdaki etkisi her geçen gün artıyor. Mobil uygulamalarda geçirilen zaman günde 3 saati bulmuş durumda. ",
+      "Fikrinizi gerçek bir iş haline getirmek için gereksinimleri belirliyor, İsteğiniz doğrultusunda projeler oluşturuyoruz.",
     image: ServicesMobile,
   },
   {
@@ -24,8 +24,7 @@ export const HomeScrollData = [
     number: "03",
     title: "Sonuçlandırıyoruz",
     description:
-      "Mobil cihazların yaşantımızdaki etkisi her geçen gün artıyor. Mobil uygulamalarda geçirilen zaman günde 3 saati bulmuş durumda.",
+      "Agile(Çevik) yazılım geliştirme metodu ile fikrinizi, ihtiyacınızı ürüne dönüştürüyoruz.",
     image: ServicesWeb,
   },
 ];
-
