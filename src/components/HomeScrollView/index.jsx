@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container, Wrapper, ImageContent, ImageWrapper } from "./styles";
 import { useInView } from "react-intersection-observer";
+import { AnimatePresence } from "framer-motion";
 
 import HomeScrollViewItem from "./components/HomeScrollViewItem";
-import { HomeScrollData } from "./config";
+import { HomeScrollData, animConfig } from "./config";
 
 const HomeScrollView = () => {
   const [active, setActive] = useState({ isInView: false, activeIndex: 0 });
@@ -40,16 +41,20 @@ const HomeScrollView = () => {
             );
           })}
       </Wrapper>
-      <ImageWrapper
-        key={active?.activeIndex}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        isClose={isClose}
-      >
-        <ImageContent src={HomeScrollData[active?.activeIndex - 1]?.image} />
-      </ImageWrapper>
+      <AnimatePresence>
+        {!isClose && (
+          <ImageWrapper
+            variants={animConfig}
+            initial="hidden"
+            animate={!isClose ? "visible" : "hidden"}
+            exit="hidden"
+          >
+            <ImageContent
+              src={HomeScrollData[active?.activeIndex - 1]?.image}
+            />
+          </ImageWrapper>
+        )}
+      </AnimatePresence>
     </Container>
   );
 };

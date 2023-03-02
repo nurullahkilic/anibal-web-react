@@ -28,3 +28,19 @@ export const HomeScrollData = [
     image: ServicesWeb,
   },
 ];
+
+
+export const animConfig = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      duration: 0.12,
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.12,
+    },
+  },
+};

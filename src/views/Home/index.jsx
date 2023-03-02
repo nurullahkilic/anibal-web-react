@@ -1,6 +1,5 @@
 import { Container, HeroImage } from "./styles";
 
-import HeroFlowmap from "../../shared/HeroFlowmap";
 import HeroSection from "../../components/HeroSection";
 import WorksSection from "../../components/WorksSection";
 import TeamsSection from "../../components/TeamsSection";
@@ -14,8 +13,6 @@ import Wallpaper from "../../assets/hero/home.png";
 import HomeScrollView from "../../components/HomeScrollView";
 import Button from "../../shared/Button";
 import { HashLink } from "react-router-hash-link";
-
-import { WorldMap } from "../../components/icons";
 
 const Home = () => {
   return (
