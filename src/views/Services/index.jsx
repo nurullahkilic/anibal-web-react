@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Container } from "./styles";
 
 import HeroSection from "../../components/HeroSection";
@@ -7,15 +8,19 @@ import { Services as ServicesData } from "./config";
 import ServicesHero from "../../assets/hero/hizmetler.png";
 
 const Services = () => {
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
   return (
     <Container>
       <HeroSection
         animatedImage={ServicesHero}
-        titleText={"HİZ MET LER"}
-        heroText="Çalışma Alanlarımız"
+        titleText={t("services.title")}
+        heroText={t("services.heroText")}
       />
-      {ServicesData &&
-        ServicesData.map((item, key) => {
+      {ServicesData[language] &&
+        ServicesData[language].map((item, key) => {
           return (
             <ServiceView
               title={item?.title}

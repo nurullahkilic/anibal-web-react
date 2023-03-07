@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { useMemo, useEffect } from "react";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 import Menu from "../Menu";
 import Navbar from "../../components/Navbar";
@@ -16,12 +17,9 @@ const useQuery = () => {
 const Layout = () => {
   let { pathname } = useLocation();
   let query = useQuery();
+  const { t } = useTranslation();
 
   const apply = query.get("apply");
-
-  // useEffect(() => {
-  //   console.log(apply);
-  // }, [query]);
 
   return (
     <>
@@ -29,9 +27,9 @@ const Layout = () => {
       <Navbar />
       <Outlet />
       <StartProject />
-      <ApplyModal modalType={apply}/>
+      <ApplyModal modalType={apply} />
       {!pathname.match(/^\/contact/gim) && <Footer />}
-      <StartProjectButton>PROJENİ BAŞLAT</StartProjectButton>
+      <StartProjectButton>{t("startProject")}</StartProjectButton>
     </>
   );
 };

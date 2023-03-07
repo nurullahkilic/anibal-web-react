@@ -1,17 +1,22 @@
+import { useTranslation } from "react-i18next";
+import { AnimatePresence, motion } from "framer-motion";
+
 import { ItemContent } from "./styles";
 import { BottomArrow } from "../../../icons";
-import { AnimatePresence, motion } from "framer-motion";
 
 import InnerContent from "../InnerContent";
 
 const Item = ({ title, i, expanded, setExpanded, item }) => {
   const isOpen = i === expanded;
 
+  const { t } = useTranslation();
   return (
     <>
       <ItemContent
         onClick={() => setExpanded(isOpen ? false : i)}
         isOpen={isOpen}
+        less={t("opportunities.detail.less")}
+        more={t("opportunities.detail.more")}
       >
         <h3>{title}</h3>
         <span onClick={() => {}}>

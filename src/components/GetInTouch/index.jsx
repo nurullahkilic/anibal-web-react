@@ -1,24 +1,22 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import { Container, Background, Content, Text, ButtonStyle } from "./styles";
-
 import GetInTouchImage from "../../assets/get-in-touch.webp";
 
 const GetInTouch = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <Content>
         <div>
-          <Text>
-            Paylaşmak istediğin harika şeyler varsa, şu anda aktif bir ilan
-            olmasa bile görmek isteriz.
-          </Text>
+          <Text>{t("getInTouch.desc")}</Text>
           <ButtonStyle isBackWhite={false} to={"/contact"} as={Link}>
-            İLETİŞİME GEÇ
+            {t("getInTouch.button")}
           </ButtonStyle>
         </div>
         <div>
-          <Text>İlgileniyoruz:</Text>
+          <Text>{t("getInTouch.interested")}:</Text>
           <ul>
             <li>Flutter Developer</li>
             <li>PHP Laravel Developer</li>

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
 import { useModal } from "../../context/ModalContext";
 
 import {
@@ -44,6 +46,11 @@ const itemValues = {
 };
 
 const Menu = () => {
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+
   const isMenuClose = useModal((state) => state.isMenuClose);
   const toggleMenu = useModal((state) => state.toggleMenu);
   const toggleStartProject = useModal((state) => state.toggleStartProject);
@@ -59,15 +66,11 @@ const Menu = () => {
           exit="hidden"
         >
           <LinksContent>
-            {MenuItems &&
-              MenuItems.map((item) => {
+            {MenuItems[language] &&
+              MenuItems[language]?.map((item) => {
                 return (
                   <motion.div variants={itemValues} key={item?.id}>
-                    <LinkItem
-                      as={Link}
-                      to={item?.href}
-                      onClick={toggleMenu}
-                    >
+                    <LinkItem as={Link} to={item?.href} onClick={toggleMenu}>
                       {item?.title}
                     </LinkItem>
                   </motion.div>
@@ -91,7 +94,7 @@ const Menu = () => {
                 })}
             </BlankSection>
             <StartProjectButton onClick={toggleStartProject}>
-              PROJENİ BAŞLAT
+              {t("startProject")}
             </StartProjectButton>
           </BottomSide>
         </Container>

@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { Link } from "react-router-dom";
 import {
   Container,
@@ -8,15 +10,19 @@ import {
 } from "./styles";
 
 import { MenuItems, SocialMedias } from "../../config/routes";
-import { Linkedin, Instagram } from "../icons";
 
 const Footer = () => {
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+
   return (
     <Container>
       <FooterItem>
         <LinksContent>
-          {MenuItems &&
-            MenuItems?.map((item) => (
+          {MenuItems[language] &&
+            MenuItems[language]?.map((item) => (
               <Link to={item?.href} key={item?.id}>
                 {item?.title}
               </Link>
@@ -24,18 +30,17 @@ const Footer = () => {
         </LinksContent>
       </FooterItem>
       <FooterItem>
-        <Title>OFİS 1</Title>
+        <Title>{t("footer.office")} 1</Title>
         <p>
           <span>Bilişim Vadisi</span>
-          Muallimköy Mahallaesi Deniz Caddesi TGB 1.Etap 1.2.B-Blok Kat:1 41400
-          Gebze/Kocaeli
+          {t("footer.adress1")}
         </p>
       </FooterItem>
       <FooterItem>
-        <Title>OFİS 2</Title>
+        <Title>{t("footer.office")} 2</Title>
         <p>
           <span>Tubitak Marmara Teknokent</span>
-          Barış Mahallesi Koşuyolu Caddesi No:30 41470 Gebze/Kocaeli
+          {t("footer.adress2")}
         </p>
       </FooterItem>
       <FooterItem>

@@ -5,15 +5,17 @@ import Opportunities from "../../components/Opportunities";
 import GetInTouch from "../../components/GetInTouch";
 
 import KariyerHero from "../../assets/hero/kariyer.png";
+import { useTranslation } from "react-i18next";
 
 const Careers = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <HeroSection
         animatedImage={KariyerHero}
-        titleText={"KA TIL"}
-        heroText="Mükemmel takımımızın bir parçası olmaya hazır mısın?"
-        description="Anibal ekibi kreatif ve başarılı yeteneklerden oluşur."
+        titleText={t("careers.title")}
+        heroText={t("careers.heroText")}
+        description={t("careers.desc")}
       />
       <Opportunities />
       <GetInTouch />

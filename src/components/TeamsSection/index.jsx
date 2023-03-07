@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -17,10 +18,12 @@ import {
 import { TeamsData, SwiperOptions } from "./config";
 
 const TeamsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <BaseLayout
-      title="TA KIM"
-      sideText="Tasarımın gücünden beslenen ekip"
+      title={t("teamsSection.title")}
+      sideText={t("teamsSection.desc")}
       backgroundColor="#1D3141"
     >
       <Container>

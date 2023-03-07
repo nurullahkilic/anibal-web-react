@@ -1,4 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
+
 import {
   Container,
   BannerImage,
@@ -20,6 +22,8 @@ import { WorksData } from "../../config/works";
 import WorkCardItem from "../../shared/WorkCardItem";
 
 const SingleWork = () => {
+  const { t } = useTranslation();
+
   const { slug } = useParams();
   const work = WorksData.find((item) => item.slug == slug);
 
@@ -29,7 +33,7 @@ const SingleWork = () => {
       <BannerTitle>{work?.title}</BannerTitle>
       <InfoSection>
         <Content>
-          <SideTitle displayNumber={"01"}>Tanım</SideTitle>
+          <SideTitle displayNumber={"01"}>{t("singleWork.brief")}</SideTitle>
           <BriefText>
             <p>
               We love a challenge here at KOTA, so being tasked with creating a
@@ -57,22 +61,22 @@ const SingleWork = () => {
         </Content>
         <Details>
           <div>
-            <DetailTitle>ENDUSTRİ</DetailTitle>
+            <DetailTitle>{t("singleWork.detail.industry")}</DetailTitle>
             <DetailItem>Sanayi</DetailItem>
           </div>
           <div>
-            <DetailTitle>KONUM</DetailTitle>
+            <DetailTitle>{t("singleWork.detail.location")}</DetailTitle>
             <DetailItem>Gebze</DetailItem>
           </div>
           <div>
-            <DetailTitle>HİZMETLER</DetailTitle>
+            <DetailTitle>{t("singleWork.detail.involvement")}</DetailTitle>
             <DetailItem>Web Tasarımı</DetailItem>
             <DetailItem>Web Yazılımı</DetailItem>
             <DetailItem>Kurumsal Kimlik</DetailItem>
             <DetailItem>Wordpress</DetailItem>
           </div>
           <div>
-            <DetailTitle>ZİYARET</DetailTitle>
+            <DetailTitle>{t("singleWork.detail.visit")}</DetailTitle>
             <DetailItem>
               <a href={work?.title} target={"_blank"}>
                 martinbuilding.com
@@ -86,7 +90,7 @@ const SingleWork = () => {
       </ProjectScreenView>
       <RelatedProjects>
         <SideTitle displayNumber={""} style={{ marginBottom: "0" }}>
-          İlişkili Projeler
+          {t("singleWork.related")}
         </SideTitle>
         <div>
           {WorksData &&

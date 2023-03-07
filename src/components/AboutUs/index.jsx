@@ -1,37 +1,23 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import Button from "../../shared/Button";
 import { Container, TextContent, BgTitle, SideText } from "./styles";
 
 const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <TextContent>
-        <BgTitle>Hakkımızda</BgTitle>
+        <BgTitle>{t("aboutUs.title")}</BgTitle>
         <SideText>
-          <p>
-            Bilgi çağından dijital çağa geçerken firmalar için dijitalleşmek
-            artık bir zorunluluk haline gelmiştir. Bu dönüşüm doğru yönetilmez
-            ve çağın gerekliliklerine uygun olarak dijital dönüşüm sağlanmazsa
-            bu faydadan ziyade zarara yol açabilir.
-          </p>
-          <p>
-            Dijital dönüşümü doğru yöneterek firmanızı bu yeni çağa taşımak için
-            Anibal Bilişim yanınızda. Kadim bir birikimin üzerine yenilikçi
-            fikirler inşa ederek teknolojinin insanlığa faydalı kullanılması
-            amacıyla kurulan Anibal Bilişim, dijital çağın oyun kurucu
-            unsurlarından biri olma yolunda ilerlemektedir.
-          </p>
-          <p>
-            Sektör bazlı analizler, doğru teşhisler ve reçeteler, dijital
-            dünyada firmanızı ileri taşıyacak çözümler üreterek ulusal ve
-            uluslararası arenada firmanızı dijital dünyaya taşıyoruz. İnsana ve
-            topluma faydalı içerikler üreterek dijital dönüşüm sürecinde insan
-            merkezli bir anlayış ile hizmet veriyoruz.
-          </p>
+          <p>{t("aboutUs.desc.p1")}</p>
+          <p>{t("aboutUs.desc.p2")}</p>
+          <p>{t("aboutUs.desc.p3")}</p>
         </SideText>
       </TextContent>
       <Button to={"/services"} isBackWhite={true} as={Link}>
-        TÜM HİZMETLERİ GÖRÜNTÜLE
+        {t("aboutUs.button")}
       </Button>
     </Container>
   );

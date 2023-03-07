@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -20,6 +21,7 @@ import { useModal } from "../../context/ModalContext";
 
 
 const Navbar = () => {
+  const { i18n: {language} } = useTranslation();
   const isMenuClose = useModal(state=>state.isMenuClose);
   const toggleMenu = useModal(state=>state.toggleMenu);
 
@@ -43,8 +45,8 @@ const Navbar = () => {
             initial="visible"
             animate={!isMenuClose ? "hidden" : "visible"}
           >
-            {NavbarItems &&
-              NavbarItems.map((item) => {
+            {NavbarItems[language] &&
+              NavbarItems[language].map((item) => {
                 return (
                   <NavbarLink as={Link} to={item?.href} key={item?.id}>
                     {item?.title}

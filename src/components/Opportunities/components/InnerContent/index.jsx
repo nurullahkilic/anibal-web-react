@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Content, Clauses, ApplyButton } from "./styles";
 
 const InnerContent = ({ item }) => {
+  const { t } = useTranslation();
   return (
     <Content>
       {item && (
@@ -21,7 +23,7 @@ const InnerContent = ({ item }) => {
         </>
       )}
       <ApplyButton isBackWhite={false} as={Link} to={`?apply=${item?.slug}`}>
-        Şimdi Başvur
+        {t("opportunities.button")}
       </ApplyButton>
     </Content>
   );

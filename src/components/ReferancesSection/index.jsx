@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { useRef, useEffect } from "react";
 import { useInView, useAnimation, motion } from "framer-motion";
 import { RefAnimation, ChildAnimation } from "./config";
@@ -11,6 +13,8 @@ import {
 } from "./styles";
 
 const ReferancesSection = ({ children, data, ...props }) => {
+  const { t } = useTranslation();
+
   const ref = useRef();
   const inView = useInView(ref);
   const controls = useAnimation();
@@ -21,7 +25,7 @@ const ReferancesSection = ({ children, data, ...props }) => {
 
   return (
     <Container {...props}>
-      <BgTitle>Referanslarımız</BgTitle>
+      <BgTitle>{t("referancesSection.title")}</BgTitle>
       <LogoItemsContent
         ref={ref}
         as={motion.div}

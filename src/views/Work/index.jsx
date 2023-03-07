@@ -15,6 +15,7 @@ import WorkCardItem from "../../shared/WorkCardItem";
 import { WorksData } from "../../config/works";
 
 import WorksHero from "../../assets/hero/isler.png";
+import { useTranslation } from "react-i18next";
 
 const WorkDescription = (
   <div>
@@ -24,46 +25,47 @@ const WorkDescription = (
 );
 
 const Work = () => {
+  const { t } = useTranslation();
   const [selected, setSelected] = useState(0);
   const [isOpen, setIsOpen] = useState(window.innerWidth > 760 ? true : false);
 
   return (
     <Container>
       <HeroSection
-        heroText="Dijital dünyadaki yolculuğunuzda yanınızdayız."
-        description={WorkDescription}
+        heroText={t("work.heroText")}
+        description={t("work.desc")}
         animatedImage={WorksHero}
-        titleText={"İŞ LER"}
+        titleText={t("work.title")}
       />
       <WorksWrapper>
         <Filter isOpen={isOpen}>
           <span onClick={() => setIsOpen(!isOpen)}>
-            Filtrele <BottomArrow fill="black" />
+            {t("work.filter.title")} <BottomArrow fill="black" />
           </span>
           <div className={!isOpen ? "hidden" : null}>
             <Button
               onClick={() => setSelected(0)}
               className={selected == 0 ? "active" : null}
             >
-              Hepsi
+              {t("work.filter.all")}
             </Button>
             <Button
               onClick={() => setSelected(1)}
               className={selected == 1 ? "active" : null}
             >
-              Web Tasarımı
+              {t("work.filter.webDesign")}
             </Button>
             <Button
               onClick={() => setSelected(2)}
               className={selected == 2 ? "active" : null}
             >
-              Web Yazılımı
+              {t("work.filter.webDevelopment")}
             </Button>
             <Button
               onClick={() => setSelected(3)}
               className={selected == 3 ? "active" : null}
             >
-              Kurumsal Kimlik
+              {t("work.filter.corporate")}
             </Button>
           </div>
         </Filter>

@@ -23,7 +23,7 @@ export const ItemContent = styled.div`
     color: ${({ theme }) => theme?.lightTurquoise};
     &::before {
       font-size: 0.8rem;
-      content: "${({ isOpen }) => (isOpen ? "AZ DETAY" : "FAZLA DETAY")}";
+      content: "${({ isOpen, less, more }) => (isOpen ? less : more)}";
       letter-spacing: 0.02em;
       margin-right: 5px;
     }

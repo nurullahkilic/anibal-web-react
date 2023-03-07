@@ -16,8 +16,14 @@ import {
 
 import Button from "../../shared/Button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const ServicesSection = () => {
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+
   const [selectedId, setSelectedId] = useState(0);
   const controls = useAnimationControls();
 
@@ -32,10 +38,10 @@ const ServicesSection = () => {
   return (
     <Container>
       <SelectionContent>
-        <Title>SERVİSLERİMİZ</Title>
+        <Title>{t("servicesSection.title")}</Title>
         <TabContent>
-          {Services &&
-            Services.map((item, key) => {
+          {Services[language] &&
+            Services[language]?.map((item, key) => {
               return (
                 <TabItem
                   isSelected={key == selectedId}
@@ -49,22 +55,22 @@ const ServicesSection = () => {
             })}
         </TabContent>
         <Button to={"/services"} as={Link}>
-          TÜM HİZMETLERİ GÖRÜNTÜLE
+          {t("servicesSection.button")}
         </Button>
       </SelectionContent>
       <ImagesContent>
         <AnimatePresence mode="wait">
           <SelectionImage
-            src={Services[selectedId]?.image}
+            src={Services[language][selectedId]?.image}
             as={motion.img}
-            key={Services[selectedId]?.title}
+            key={Services[language][selectedId]?.title}
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.22 }}
           />
         </AnimatePresence>
-        <SelectionText>{Services[selectedId]?.desc}</SelectionText>
+        <SelectionText>{Services[language][selectedId]?.desc}</SelectionText>
       </ImagesContent>
     </Container>
   );

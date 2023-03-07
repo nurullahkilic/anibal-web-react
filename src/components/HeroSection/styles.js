@@ -60,6 +60,11 @@ export const HeroTextContent = styled.div`
 
 export const HeroTitle = styled(Title)`
   font-size: 10rem;
+  @media (max-width: 760px) {
+    font-size: 8rem;
+    text-align: center;
+    padding: 0 4rem;
+  }
 `;
 
 export const BgText = styled.div`

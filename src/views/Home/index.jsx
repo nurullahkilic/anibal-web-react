@@ -1,3 +1,6 @@
+import { HashLink } from "react-router-hash-link";
+import { useTranslation } from "react-i18next";
+
 import { Container, HeroImage } from "./styles";
 
 import HeroSection from "../../components/HeroSection";
@@ -12,9 +15,9 @@ import Wallpaper from "../../assets/hero/home.png";
 
 import HomeScrollView from "../../components/HomeScrollView";
 import Button from "../../shared/Button";
-import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <HeroSection
@@ -31,7 +34,7 @@ const Home = () => {
           to={"/agency#referances"}
           scroll={(el) => el.scrollIntoView({ behavior: "auto" })}
         >
-          HEPSİNİ GÖR
+          {t("seeAll")}
         </Button>
       </ReferancesSection>
       <TeamsSection />

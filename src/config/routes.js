@@ -1,48 +1,96 @@
-export const NavbarItems = [
-  {
-    id: 1,
-    title: "İşlerimiz",
-    href: "/works",
-  },
-  {
-    id: 2,
-    title: "İletişim",
-    href: "/contact",
-  },
-];
+export const NavbarItems = {
+  "tr-TR": [
+    {
+      id: 1,
+      title: "İşlerimiz",
+      href: "/works",
+    },
+    {
+      id: 2,
+      title: "İletişim",
+      href: "/contact",
+    },
+  ],
+  "en-US": [
+    {
+      id: 1,
+      title: "Work",
+      href: "/works",
+    },
+    {
+      id: 2,
+      title: "Contact",
+      href: "/contact",
+    },
+  ],
+};
 
-export const MenuItems = [
-  {
-    id: 1,
-    title: "Anasayfa",
-    href: "/",
-  },
-  {
-    id: 2,
-    title: "Kurumsal",
-    href: "/agency",
-  },
-  {
-    id: 3,
-    title: "Hizmetlerimiz",
-    href: "/services",
-  },
-  {
-    id: 4,
-    title: "İşlerimiz",
-    href: "/works",
-  },
-  {
-    id: 5,
-    title: "İletişim",
-    href: "/contact",
-  },
-  {
-    id: 6,
-    title: "Kariyer",
-    href: "/careers",
-  },
-];
+export const MenuItems = {
+  "tr-TR": [
+    {
+      id: 1,
+      title: "Anasayfa",
+      href: "/",
+    },
+    {
+      id: 2,
+      title: "Kurumsal",
+      href: "/agency",
+    },
+    {
+      id: 3,
+      title: "Hizmetlerimiz",
+      href: "/services",
+    },
+    {
+      id: 4,
+      title: "İşlerimiz",
+      href: "/works",
+    },
+    {
+      id: 5,
+      title: "İletişim",
+      href: "/contact",
+    },
+    {
+      id: 6,
+      title: "Kariyer",
+      href: "/careers",
+    },
+  ],
+  "en-US": [
+    {
+      id: 1,
+      title: "Home",
+      href: "/",
+    },
+    {
+      id: 2,
+      title: "Agency",
+      href: "/agency",
+    },
+    {
+      id: 3,
+      title: "Services",
+      href: "/services",
+    },
+    {
+      id: 4,
+      title: "Works",
+      href: "/works",
+    },
+    {
+      id: 5,
+      title: "Contact",
+      href: "/contact",
+    },
+    {
+      id: 6,
+      title: "Careers",
+      href: "/careers",
+    },
+  ],
+};
 
 import { Linkedin, Instagram, Twitter, Facebook } from "../components/icons";
 

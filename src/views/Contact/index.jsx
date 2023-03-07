@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   AdressContent,
   Adress,
@@ -12,23 +13,19 @@ import ContactLayout from "../../shared/ContactLayout";
 import { SocialMedias } from "../../config/routes";
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <ContactLayout isAnimated={true}>
       <AdressContent>
         <Adress>
           <AdressTitle>Bilişim Vadisi</AdressTitle>
-          <Detail>
-            Muallimköy Mahallesi Deniz Caddesi TGB 1.Etap 1.2.B-Blok Kat:1 41400
-            Gebze/Kocaeli
-          </Detail>
+          <Detail>{t("footer.adress1")}</Detail>
           <Tel>0 (262) 503 97 34</Tel>
           <Mail>info@anibalbilisim.com</Mail>
         </Adress>
         <Adress>
           <AdressTitle>Tubitak Teknokent</AdressTitle>
-          <Detail>
-            Barış Mahallesi Koşuyolu Caddesi No:30 41470 Gebze/Kocaeli
-          </Detail>
+          <Detail>{t("footer.adress2")}</Detail>
         </Adress>
       </AdressContent>
       <LinksContent>

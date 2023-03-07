@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { Content, BgTitle, MdTitle, SmTitle } from "./styles";
 
@@ -7,6 +8,8 @@ import ContactPopup from "../../shared/ContactModal";
 
 import { OpportunitiesDatas } from "../../components/Opportunities/config";
 const ApplyModal = ({ modalType }) => {
+  const { t } = useTranslation();
+
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(undefined);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -36,10 +39,8 @@ const ApplyModal = ({ modalType }) => {
       }}
     >
       <Content>
-        <BgTitle>
-          {selected?.name} pozisyonu için şimdi başvur!
-        </BgTitle>
-        <SmTitle>Bizimle iletişime geç!</SmTitle>
+        <BgTitle>{t("applyModal.title", { role: selected?.name })}</BgTitle>
+        <SmTitle>{t("applyModal.contact")}</SmTitle>
         <MdTitle href="mailto:destek@anibalbilisim.com">
           destek@anibalbilisim.com
         </MdTitle>

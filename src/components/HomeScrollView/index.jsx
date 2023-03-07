@@ -2,11 +2,15 @@ import { useEffect, useState } from "react";
 import { Container, Wrapper, ImageContent, ImageWrapper } from "./styles";
 import { useInView } from "react-intersection-observer";
 import { AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import HomeScrollViewItem from "./components/HomeScrollViewItem";
 import { HomeScrollData, animConfig } from "./config";
 
 const HomeScrollView = () => {
+  const {
+    i18n: { language },
+  } = useTranslation();
   const [active, setActive] = useState({ isInView: false, activeIndex: 0 });
   const [isClose, setIsClose] = useState(true);
 
@@ -25,8 +29,8 @@ const HomeScrollView = () => {
   return (
     <Container>
       <Wrapper ref={ref}>
-        {HomeScrollData &&
-          HomeScrollData.map((item, key) => {
+        {HomeScrollData[language] &&
+          HomeScrollData[language]?.map((item, key) => {
             return (
               <HomeScrollViewItem
                 key={key}
@@ -41,20 +45,22 @@ const HomeScrollView = () => {
             );
           })}
       </Wrapper>
-      <AnimatePresence>
-        {!isClose && (
-          <ImageWrapper
-            variants={animConfig}
-            initial="hidden"
-            animate={!isClose ? "visible" : "hidden"}
-            exit="hidden"
-          >
-            <ImageContent
-              src={HomeScrollData[active?.activeIndex - 1]?.image}
-            />
-          </ImageWrapper>
-        )}
-      </AnimatePresence>
+      {HomeScrollData[language] && (
+        <AnimatePresence>
+          {!isClose && (
+            <ImageWrapper
+              variants={animConfig}
+              initial="hidden"
+              animate={!isClose ? "visible" : "hidden"}
+              exit="hidden"
+            >
+              <ImageContent
+                src={HomeScrollData[language][active?.activeIndex - 1]?.image}
+              />
+            </ImageWrapper>
+          )}
+        </AnimatePresence>
+      )}
     </Container>
   );
 };

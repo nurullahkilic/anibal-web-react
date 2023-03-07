@@ -11,28 +11,23 @@ import {
 import HeroFlowmap from "../../shared/HeroFlowmap";
 
 import { useAnimated } from "./util";
-
-const defaultDescription = (
-  <div>
-    Ulaşmak istediğiniz teknolojik hedefe, en doğru teknolojiler ve mühendislik
-    teknikleri ile gitmenize yardımcı olurken, özverili ve samimi ekibimiz ile{" "}
-    <span>her zaman sizlerin yanında olacağız.</span>
-  </div>
-);
+import { Trans } from "react-i18next";
+import { t } from "i18next";
 
 const HeroSection = ({
   titleText,
   heroImage,
   animatedImage,
-  heroText = "Geleceğe yol açar",
-  description = defaultDescription,
+  heroText,
+  description,
 }) => {
   const isAnimated = useAnimated({ minWidth: 760 });
 
   return (
     <Container>
       <SideContent>
-        {!isAnimated && (!heroImage ?  <HeroTitle>{titleText}</HeroTitle> : heroImage)}
+        {!isAnimated &&
+          (!heroImage ? <HeroTitle>{titleText}</HeroTitle> : heroImage)}
       </SideContent>
       {isAnimated && (
         <BackgroundTexture>
@@ -40,8 +35,14 @@ const HeroSection = ({
         </BackgroundTexture>
       )}
       <HeroTextContent>
-        <BgText>{heroText}</BgText>
-        <SmText>{description}</SmText>
+        <BgText>{heroText ? heroText : t("heroTitle")}</BgText>
+        <SmText>
+          {description ? (
+            description
+          ) : (
+            <Trans i18nKey="heroDefaultDesc" components={[<span />]} />
+          )}
+        </SmText>
       </HeroTextContent>
     </Container>
   );
