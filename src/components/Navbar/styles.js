@@ -82,8 +82,8 @@ export const ItemsContent = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2.4rem;
-  margin-right: 2.1rem;
+  gap: 2rem;
+  margin-right: 1rem;
   @media (max-width: 760px) {
     display: none;
   }

@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import { useModal } from "../../context/ModalContext";
+
 import {
   Content,
   LogoLink,
@@ -11,20 +13,20 @@ import {
   NavbarRight,
   NavbarLink,
 } from "./styles";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 import AnibalMigfer from "../../assets/anibal-hero.png";
 import HamburgerIcon from "../HamburgerIcon";
 
 import { NavbarItems } from "../../config/routes";
-import { LinksAnimation } from "./config"
-import { useModal } from "../../context/ModalContext";
-
+import { LinksAnimation } from "./config";
 
 const Navbar = () => {
-  const { i18n: {language} } = useTranslation();
-  const isMenuClose = useModal(state=>state.isMenuClose);
-  const toggleMenu = useModal(state=>state.toggleMenu);
-
+  const {
+    i18n: { language },
+  } = useTranslation();
+  const isMenuClose = useModal((state) => state.isMenuClose);
+  const toggleMenu = useModal((state) => state.toggleMenu);
 
   return (
     <>
@@ -46,7 +48,7 @@ const Navbar = () => {
             animate={!isMenuClose ? "hidden" : "visible"}
           >
             {NavbarItems[language] &&
-              NavbarItems[language].map((item) => {
+              NavbarItems[language]?.map((item) => {
                 return (
                   <NavbarLink as={Link} to={item?.href} key={item?.id}>
                     {item?.title}
@@ -54,10 +56,13 @@ const Navbar = () => {
                 );
               })}
           </ItemsContent>
-          <HamburgerIcon
-            isClose={isMenuClose}
-            onClick={toggleMenu}
-          ></HamburgerIcon>
+          <>
+            <LanguageSwitcher />
+            <HamburgerIcon
+              isClose={isMenuClose}
+              onClick={toggleMenu}
+            ></HamburgerIcon>
+          </>
         </NavbarRight>
       </Content>
     </>

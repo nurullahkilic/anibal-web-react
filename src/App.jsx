@@ -20,14 +20,8 @@ const App = () => {
   const [isFontsReady, setIsFontReady] = useState(false);
   useEffect(() => {
     document.fonts.ready
-      .then(() => {
-        setIsFontReady(true);
-        console.log("Fonts are loaded!!!");
-      })
-      .catch(() => {
-        setIsFontReady(true);
-        console.log("Error");
-      });
+      .then(() => setIsFontReady(true))
+      .catch(() => setIsFontReady(true));
   }, []);
 
   if (!isFontsReady) return <Loading />;

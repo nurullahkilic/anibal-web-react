@@ -1,0 +1,102 @@
+{
+    "startProject": "PROJENİ BAŞLAT",
+    "seeAll": "HEPSİNİ GÖR",
+    "heroTitle": "Führt in die Zukunft",
+    "heroDefaultDesc": "Während wir Ihnen helfen, das technologische Ziel zu erreichen, das Sie mit den genauesten Technologien und Ingenieurtechniken erreichen möchten, werden wir mit unserem engagierten und aufrichtigen <0>Team immer an Ihrer Seite sein.</0>",
+    "aboutUs": {
+        "title": "Hakkımızda",
+        "desc": {
+            "p1": "Bilgi çağından dijital çağa geçerken firmalar için dijitalleşmek artık bir zorunluluk haline gelmiştir. Bu dönüşüm doğru yönetilmez ve çağın gerekliliklerine uygun olarak dijital dönüşüm sağlanmazsa bu faydadan ziyade zarara yol açabilir.",
+            "p2": "Dijital dönüşümü doğru yöneterek firmanızı bu yeni çağa taşımak için Anibal Bilişim yanınızda. Kadim bir birikimin üzerine yenilikçi fikirler inşa ederek teknolojinin insanlığa faydalı kullanılması amacıyla kurulan Anibal Bilişim, dijital çağın oyun kurucu unsurlarından biri olma yolunda ilerlemektedir.",
+            "p3": "Sektör bazlı analizler, doğru teşhisler ve reçeteler, dijital dünyada firmanızı ileri taşıyacak çözümler üreterek ulusal ve uluslararası arenada firmanızı dijital dünyaya taşıyoruz. İnsana ve topluma faydalı içerikler üreterek dijital dönüşüm sürecinde insan merkezli bir anlayış ile hizmet veriyoruz."
+        },
+        "button": "TÜM HİZMETLERİ GÖRÜNTÜLE"
+    },
+    "teamsSection": {
+        "title": "TA KIM",
+        "desc": "Tasarımın gücünden beslenen ekip"
+    },
+    "worksSection": {
+        "title": "İŞ LER",
+        "desc": "Dijital dünyadaki yolculuğunuzda yanınızdayız"
+    },
+    "servicesSection": {
+        "title": "SERVİSLERİMİZ",
+        "button": "TÜM HİZMETLERİ GÖRÜNTÜLE"
+    },
+    "referancesSection": {
+        "title": "Referanslarımız"
+    },
+    "footer": {
+        "office": "OFİS",
+        "adress1": "Muallimköy Mahallaesi Deniz Caddesi TGB 1.Etap 1.2.B-Blok Kat:1 41400 Gebze/Kocaeli",
+        "adress2": "Barış Mahallesi Koşuyolu Caddesi No:30 41470 Gebze/Kocaeli"
+    },
+    "getInTouch": {
+        "desc": "Paylaşmak istediğin harika şeyler varsa, şu anda aktif bir ilan olmasa bile görmek isteriz.",
+        "button": "İLETİŞİME GEÇ",
+        "interested": "İlgileniyoruz"
+    },
+    "opportunities": {
+        "title": "Mevcut Pozisyonlar",
+        "button": "Şimdi Başvur",
+        "detail": {
+            "less": "AZ DETAY",
+            "more": "FAZLA DETAY"
+        }
+    },
+    "agency": {
+        "title": "KU RUM SAL"
+    },
+    "careers": {
+        "title": "KA TIL",
+        "heroText": "Mükemmel takımımızın bir parçası olmaya hazır mısın?",
+        "desc": "Anibal ekibi kreatif ve başarılı yeteneklerden oluşur."
+    },
+    "services": {
+        "title": "HİZ MET LER",
+        "heroText": "Çalışma Alanlarımız"
+    },
+    "work": {
+        "title": "İŞ LER",
+        "heroText": "Dijital dünyadaki yolculuğunuzda yanınızdayız.",
+        "desc": "Profesyonel ekibimiz ve çözüm ortakları ile 360° hizmet sunarak müşterilerine sürdürülebilir ve hızlı hizmet vermek için çalışıyoruz.",
+        "filter": {
+            "title": "Filtrele",
+            "all": "Hepsi",
+            "webDesign": "Web Tasarımı",
+            "webDevelopment": "Web Yazılımı",
+            "corporate": "Kurumsal Kimlik"
+        }
+    },
+    "singleWork": {
+        "brief": "Tanım",
+        "detail": {
+            "industry": "ENDUSTRİ",
+            "location": "KONUM",
+            "involvement": "HİZMETLER",
+            "visit": "ZİYARET"
+        },
+        "related": "İlişkili Projeler"
+    },
+    "notFound": {
+        "desc": "Not Found!",
+        "button": "BACK TO HOME PAGE"
+    },
+    "applyModal": {
+        "title": "{{role}} pozisyonu için şimdi başvur!",
+        "contact": "Bizimle iletişime geç!"
+    },
+    "startProjectModal": {
+        "title": "Haydi! Projene başlamanda sana yardımcı olalım!",
+        "contact": "Let's contact us!"
+    },
+    "contactLayout": {
+        "name": "Ad",
+        "surname": "Soyad",
+        "mail": "Email",
+        "subject": "Konu",
+        "message": "Mesaj",
+        "submit": "GÖNDER"
+    }
+}

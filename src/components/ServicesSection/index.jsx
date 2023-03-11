@@ -61,16 +61,16 @@ const ServicesSection = () => {
       <ImagesContent>
         <AnimatePresence mode="wait">
           <SelectionImage
-            src={Services[language][selectedId]?.image}
+            src={Services?.[language]?.[selectedId]?.image}
             as={motion.img}
-            key={Services[language][selectedId]?.title}
+            key={Services?.[language]?.[selectedId]?.title}
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.22 }}
           />
         </AnimatePresence>
-        <SelectionText>{Services[language][selectedId]?.desc}</SelectionText>
+        <SelectionText>{Services?.[language]?.[selectedId]?.desc}</SelectionText>
       </ImagesContent>
     </Container>
   );

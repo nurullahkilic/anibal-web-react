@@ -8,9 +8,15 @@ export const useHeroImage = ({ name }) => {
   } = useTranslation();
 
   useEffect(() => {
-    import(`../hero/${language}/${name}.png`).then((path) => {
-      setSource(path?.default);
-    });
+    import(`../hero/${language}/${name}.png`)
+      .then((path) => {
+        setSource(path?.default);
+      })
+      .catch(() =>
+        console.error(
+          `Cannot find the "${language}/${name}.png" file in locales/${language} directory.`
+        )
+      );
   }, [language]);
 
   return { source };
