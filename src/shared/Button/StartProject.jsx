@@ -1,26 +1,15 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
-import { useModal} from "../../context/ModalContext"
+import { useModal } from "../../context/ModalContext";
+import { useScrollEvent } from "../../util";
 
 const StartProjectButton = ({ children, ...props }) => {
-  const [isHidden, setIsHidden] = useState(true);
-  const toggleStartProject = useModal(state=>state.toggleStartProject);
-  
-
-  function calculateWindowSize() {
-    setIsHidden(window.pageYOffset < window.innerHeight / 2);
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", calculateWindowSize);
-    return () => {
-      window.removeEventListener("scroll", calculateWindowSize);
-    };
-  });
+  const { isPass } = useScrollEvent();
+  const toggleStartProject = useModal((state) => state.toggleStartProject);
 
   return (
     <StartProjectButtonWrapper
-      className={isHidden ? "hidden" : null}
+      className={!isPass ? "hidden" : null}
       onClick={toggleStartProject}
       {...props}
     >

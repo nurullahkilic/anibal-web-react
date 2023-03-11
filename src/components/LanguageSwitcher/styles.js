@@ -10,6 +10,14 @@ export const Label = styled.label`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s ease-in-out 0s;
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
 
   @media (max-width: 760px) {
     padding: 5px 0;

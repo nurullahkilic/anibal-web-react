@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -20,6 +21,7 @@ import HamburgerIcon from "../HamburgerIcon";
 
 import { NavbarItems } from "../../config/routes";
 import { LinksAnimation } from "./config";
+import { useScrollEvent } from "../../util";
 
 const Navbar = () => {
   const {
@@ -27,6 +29,8 @@ const Navbar = () => {
   } = useTranslation();
   const isMenuClose = useModal((state) => state.isMenuClose);
   const toggleMenu = useModal((state) => state.toggleMenu);
+
+  const { isPass } = useScrollEvent();
 
   return (
     <>
@@ -57,7 +61,7 @@ const Navbar = () => {
               })}
           </ItemsContent>
           <>
-            <LanguageSwitcher />
+            <LanguageSwitcher className={isPass && window.innerWidth < 760 ? "hidden" : null} />
             <HamburgerIcon
               isClose={isMenuClose}
               onClick={toggleMenu}

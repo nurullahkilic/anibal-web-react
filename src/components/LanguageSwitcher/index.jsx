@@ -3,7 +3,7 @@ import { Label, Flag } from "./styles";
 
 import { changeLanguage, languages } from "../../config/i18n";
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = (props) => {
   const {
     i18n: { language },
   } = useTranslation();
@@ -14,7 +14,7 @@ const LanguageSwitcher = () => {
 
   return (
     <>
-      <Label htmlFor="languages">
+      <Label htmlFor="languages" {...props}>
         {languages.map((item, key) =>
           item.lng == language ? (
             <Flag key={key}>
