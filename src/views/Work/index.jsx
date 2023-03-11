@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -14,18 +15,12 @@ import { BottomArrow } from "../../components/icons";
 import WorkCardItem from "../../shared/WorkCardItem";
 import { WorksData } from "../../config/works";
 
-import WorksHero from "../../assets/hero/isler.png";
-import { useTranslation } from "react-i18next";
-
-const WorkDescription = (
-  <div>
-    Profesyonel ekibimiz ve çözüm ortakları ile 360° hizmet sunarak
-    müşterilerine sürdürülebilir ve hızlı hizmet vermek için çalışıyoruz.
-  </div>
-);
+import { useHeroImage } from "../../assets/hero";
 
 const Work = () => {
+  const { source } = useHeroImage({ name: "Work" });
   const { t } = useTranslation();
+  
   const [selected, setSelected] = useState(0);
   const [isOpen, setIsOpen] = useState(window.innerWidth > 760 ? true : false);
 
@@ -34,7 +29,7 @@ const Work = () => {
       <HeroSection
         heroText={t("work.heroText")}
         description={t("work.desc")}
-        animatedImage={WorksHero}
+        animatedImage={source}
         titleText={t("work.title")}
       />
       <WorksWrapper>

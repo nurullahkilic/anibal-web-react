@@ -8,7 +8,10 @@ import ContactPopup from "../../shared/ContactModal";
 
 import { OpportunitiesDatas } from "../../components/Opportunities/config";
 const ApplyModal = ({ modalType }) => {
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(undefined);
@@ -22,7 +25,7 @@ const ApplyModal = ({ modalType }) => {
   };
 
   useEffect(() => {
-    const selectedItem = OpportunitiesDatas.find(
+    const selectedItem = OpportunitiesDatas?.[language]?.find(
       (item) => item.slug == modalType
     );
     if (selectedItem == undefined) return;

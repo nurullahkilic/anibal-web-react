@@ -1,18 +1,21 @@
+import { useTranslation } from "react-i18next";
+
 import { Container } from "./styles";
 
 import HeroSection from "../../components/HeroSection";
 import Opportunities from "../../components/Opportunities";
 import GetInTouch from "../../components/GetInTouch";
 
-import KariyerHero from "../../assets/hero/kariyer.png";
-import { useTranslation } from "react-i18next";
+import { useHeroImage } from "../../assets/hero";
 
 const Careers = () => {
+  const { source } = useHeroImage({ name: "Careers" });
   const { t } = useTranslation();
+
   return (
     <Container>
       <HeroSection
-        animatedImage={KariyerHero}
+        animatedImage={source}
         titleText={t("careers.title")}
         heroText={t("careers.heroText")}
         description={t("careers.desc")}

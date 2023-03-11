@@ -14,36 +14,7 @@ import {
 } from "./styles";
 
 import { MenuItems, SocialMedias } from "../../config/routes";
-
-const container = {
-  hidden: {
-    opacity: 1,
-    height: 0,
-    transition: {
-      duration: 0.7,
-      delay: 0.4,
-      staggerChildren: 0.1,
-      staggerDirection: -1,
-    },
-  },
-  visible: {
-    opacity: 1,
-    height: "100%",
-    transition: {
-      duration: 0.3,
-      delayChildren: 0.34,
-      staggerChildren: 0.13,
-    },
-  },
-};
-
-const itemValues = {
-  hidden: { y: 25, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
+import { containerAnim, itemAnim } from "./config";
 
 const Menu = () => {
   const {
@@ -60,7 +31,7 @@ const Menu = () => {
       {!isMenuClose && (
         <Container
           as={motion.div}
-          variants={container}
+          variants={containerAnim}
           initial="hidden"
           animate={isMenuClose ? "hidden" : "visible"}
           exit="hidden"
@@ -69,7 +40,7 @@ const Menu = () => {
             {MenuItems[language] &&
               MenuItems[language]?.map((item) => {
                 return (
-                  <motion.div variants={itemValues} key={item?.id}>
+                  <motion.div variants={itemAnim} key={item?.id}>
                     <LinkItem as={Link} to={item?.href} onClick={toggleMenu}>
                       {item?.title}
                     </LinkItem>
@@ -77,7 +48,7 @@ const Menu = () => {
                 );
               })}
           </LinksContent>
-          <BottomSide as={motion.div} variants={itemValues}>
+          <BottomSide as={motion.div} variants={itemAnim}>
             <BlankSection>
               {SocialMedias &&
                 SocialMedias?.map((item, key) => {

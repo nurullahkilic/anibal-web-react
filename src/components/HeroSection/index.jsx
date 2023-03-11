@@ -29,7 +29,7 @@ const HeroSection = ({
         {!isAnimated &&
           (!heroImage ? <HeroTitle>{titleText}</HeroTitle> : heroImage)}
       </SideContent>
-      {isAnimated && (
+      {isAnimated && (animatedImage != null) && (
         <BackgroundTexture>
           <HeroFlowmap desktop={animatedImage} />
         </BackgroundTexture>

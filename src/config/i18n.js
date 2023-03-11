@@ -3,8 +3,8 @@ import Backend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 
 i18n.use(Backend).use(initReactI18next).init({
-  // resources,
   fallbackLng: "tr-TR",
+  // fallbackLng: "en-US",
 });
 
 export default i18n;

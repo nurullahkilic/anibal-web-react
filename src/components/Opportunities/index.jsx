@@ -6,11 +6,14 @@ import Accordion from "./components/Accordion";
 import { OpportunitiesDatas } from "./config";
 
 const Opportunities = () => {
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
   return (
     <Container>
       <Header>{t("opportunities.title")}</Header>
-      <Accordion data={OpportunitiesDatas} />
+      <Accordion data={OpportunitiesDatas?.[language]} />
     </Container>
   );
 };

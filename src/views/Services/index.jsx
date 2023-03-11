@@ -5,22 +5,24 @@ import HeroSection from "../../components/HeroSection";
 import ServiceView from "../../components/ServiceView";
 import { Services as ServicesData } from "./config";
 
-import ServicesHero from "../../assets/hero/hizmetler.png";
+import { useHeroImage } from "../../assets/hero";
 
 const Services = () => {
+  const { source } = useHeroImage({ name: "Services" });
   const {
     t,
     i18n: { language },
   } = useTranslation();
+
   return (
     <Container>
       <HeroSection
-        animatedImage={ServicesHero}
+        animatedImage={source}
         titleText={t("services.title")}
         heroText={t("services.heroText")}
       />
       {ServicesData[language] &&
-        ServicesData[language].map((item, key) => {
+        ServicesData[language]?.map((item, key) => {
           return (
             <ServiceView
               title={item?.title}

@@ -9,15 +9,16 @@ import ReferancesSection from "../../components/ReferancesSection";
 
 import { ReferancesData } from "../../components/ReferancesSection/config";
 
-import KurumsalHero from "../../assets/hero/kurumsal.png";
 import AgencyImage from "../../assets/agency.jpeg";
+import { useHeroImage } from "../../assets/hero";
 
 const Agency = () => {
+  const { source } = useHeroImage({ name: "Agency" });
   const { t } = useTranslation();
-  
+
   return (
     <Container>
-      <HeroSection animatedImage={KurumsalHero} titleText={t("agency.title")} />
+      <HeroSection animatedImage={source} titleText={t("agency.title")} />
       <AboutUs />
       <ImageContent src={AgencyImage} alt="Agency Image" />
       <TeamsSection />

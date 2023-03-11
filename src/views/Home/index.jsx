@@ -11,17 +11,18 @@ import ReferancesSection from "../../components/ReferancesSection";
 import { HomePageReferancesData } from "../../components/ReferancesSection/config";
 
 import AnibalImage from "../../assets/anibal-hero.png";
-import Wallpaper from "../../assets/hero/home.png";
+import { useHeroImage } from "../../assets/hero";
 
 import HomeScrollView from "../../components/HomeScrollView";
 import Button from "../../shared/Button";
 
 const Home = () => {
+  const { source } = useHeroImage({ name: "Home" });
   const { t } = useTranslation();
   return (
     <Container>
       <HeroSection
-        animatedImage={Wallpaper}
+        animatedImage={source}
         heroImage={<HeroImage src={AnibalImage} />}
       />
       <HomeScrollView />
