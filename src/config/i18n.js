@@ -29,9 +29,9 @@ export const languages = [
     lng: "en-US",
     icon: USFlag,
   },
-  {
-    name: "Deutsch",
-    lng: "de-DE",
-    icon: DeutschFlag,
-  },
+  // {
+  //   name: "Deutsch",
+  //   lng: "de-DE",
+  //   icon: DeutschFlag,
+  // },
 ];
