@@ -28,6 +28,7 @@ export const TitleSection = styled(Title)`
   font-weight: 900;
   text-align: left;
   @media (max-width: 1000px) {
+    width: 100%;
     text-align: center;
   }
 `;
@@ -41,6 +42,7 @@ export const TextSide = styled.div`
   justify-content: center;
   text-align: left;
   @media (max-width: 1000px) {
+    text-align: center;
     max-width: 70%;
     align-items: center;
     padding: 8rem 5rem;
